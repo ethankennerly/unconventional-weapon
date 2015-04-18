@@ -1,8 +1,10 @@
 package com.finegamedesign.anagram
 {
     import flash.display.MovieClip;
+    import flash.display.Sprite;
+    import flash.events.Event;
 
-    public class Main extends 
+    public class Main extends Sprite
     {
         public var main:MovieClip;
 

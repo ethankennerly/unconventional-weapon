@@ -9,6 +9,8 @@ TODO
 	Word robot approaches.
 	Read score each letter in word.
 	Long word increases hit length.
+	Return to level select, after 10 words.
+	Level select.
 	Block crack.
 	Block burst.
 	Block shuffle.
@@ -74,6 +76,9 @@ REFERENCE THEMES
 	Play role of rebel in Iran-Contra scandal.  http://en.wikipedia.org/wiki/Contras
 	Prison
 	http://www.wired.com/2008/09/world-of-warcra/
+
+REFERENCE ART
+	GEM https://www.google.com/search?q=GEM&source=lnms&tbm=isch&sa=X&ei=qbMyVcXGL8PfoATBxIHYBQ&ved=0CAcQ_AUoAQ&biw=1207&bih=624
 
 REFERENCE TOYS
 	Pinata https://www.google.com/search?q=unconventional+weapon+toy&biw=1207&bih=624&source=lnms&tbm=isch&sa=X&ei=l74xVZ3jCYzaoASdnYHIAw&ved=0CAcQ_AUoAg#tbm=isch&q=pinata
