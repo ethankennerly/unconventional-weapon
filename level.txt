@@ -1,53 +1,80 @@
-ANAGRAM ASSASSIN
-
-
-
-
-
-
-
-
-
-START
+ANAGRAM ADVENTURE
+                         TAR
+           @             S T
 
 [Type "START".  Then press the ENTER key.]
 
 
 
 
-SPLEL
+                        SEP
+            @           L L
 
-[Type "SPELL".  Then press the ENTER key.]
-
-
-
-
-WORDS
-
-[For bonus points, first type "ROD", "RODS", "WORD", "DROW".  Press ENTER after each word.]
+[To destroy the robot made of letters, type a word with all the letters.  Hint:  "SPELL".  Then press the ENTER key.]
 
 
+[Every letter in the robot adds gems.]
 
-WORDS
 
-[To finish, use all letters.  Example:  "WORDS" or "SWORD".]
+                         WOR
+             @           D S
+
+[To knock the robot back and take more gems, type a wordthat only uses some letters.  Press ENTER or SPACE after each word.  Examples: "ROD", "RODS", "WORD".]
 
 
 
-STARE
+                          WOR
+              @           D S
 
-[Type each sub-word quickly before, the letters hit you!]
+[To defeat the robot, use all letters in one word.  Example:  "WORDS" or "SWORD".]
 
 
 
 
-WOT WSORD
+                         STA
+              @          R E
 
-[Type a word with letters from both words to hit both.  Example:  "WOOD"]
-
-
-WOT WSORD
-
-[Then type each full word. Example:  "TWO".  "WORDS".]
+[The robot is approaching you.  If a letter hits your letter it knocks you back!  Type words with these letters, before the robot hits you!  Example:  "EAT".]
 
 
+                         STA
+              @          R E
+
+[To destroy the robot, type all letters.  Hint:  "STARE".  Then press ENTER.]
+
+
+
+                    T
+                    O    WSO
+                @   W    R D
+
+[To knockback both robots, type a word with letters from both words.  Example:  "WOOD"]
+
+
+                    T
+                    O    WSO
+                @   W    R D
+
+[To destroy each robot, type each full word. Example:  "TWO".  "WORDS".]
+
+
+                     RIO
+                     E U
+             @       S S
+
+[Harder robots are made of more valuable gems.  Each letter in this harder robot is worth 5 points!]
+
+
+
+                     I E
+                    MNPTN
+            @       O O T
+
+[A boss robot with more letters moves slow.  Spell short words to knock it back.  Hint:  This boss' name is "OMNIPOTENT".]
+
+
+                     F
+                     O
+             @       R
+
+[Robots with fewer letters move faster!]

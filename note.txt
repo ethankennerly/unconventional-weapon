@@ -1,6 +1,45 @@
-An unconventional weapon
+TODO
+	Read letters.
+	Type letters.
+	Moby word list for crosswords or Scrabble.
+	Use all letters to advance to next scene.
+	Partial letters to knockback robot.
+	Parse level script.
+	Read instruction.
+	Word robot approaches.
+	Read score each letter in word.
+	Long word increases hit length.
+	Block crack.
+	Block burst.
+	Block shuffle.
+	Sweep gems into score.
+	Environment.
+	Multiplier for some letters.  Anagram Magic.
+	
 
-Reference games
+THEME
+	An unconventional weapon
+
+REFERENCE GAMES
+	http://www.miniclip.com/games/anagram-magic/en/
+	"""
+Games and puzzles
+
+Anagrams are in themselves a recreational activity, but they also make up part of many other games, puzzles and game shows.
+
+Cryptic crossword puzzles frequently use anagrammatic clues, usually indicating that they are anagrams by the inclusion of a descriptive term like "confused" or "in disarray". An example would be Businessman burst into tears (9 letters). The solution, stationer, is an anagram of into tears, the letters of which have burst out of their original arrangement to form the name of a type of businessman.
+In Scrabble, the players must make words by placing lettered tiles on a grid to score points in an effort to have scored more points than the opponent at the end of the game. A version of Scrabble called Clabbers, the name itself being an anagram of Scrabble, allows for tiles to be placed in any order on the board as long as they anagram to a valid word.
+In Boggle, players make words from a grid of sixteen random letters by joining adjacent cubes to make valid words.
+On the British game show Countdown, contestants are given 30 seconds to make the longest word from nine random letters. One point is awarded per letter of the word, or 18 points (double) for using all nine letters. An example of a 9-letter word: s, a, a, p, i, o, n, j, c, forms "Japonicas."
+On the British game show BrainTeaser, contestants are shown a word broken into randomly arranged segments and must announce the whole word. At the end of the game there is a "Pyramid" which starts with a three-letter word. A letter appears in the line below to which the player must add the existing letters to find a solution. The pattern continues until the player reaches the final eight-letter anagram. The player wins the game by solving all the anagrams within the allotted time.
+The Jumble is a puzzle found in many newspapers in the United States requiring the unscrambling of letters to find the solution.
+Anagrammatic is a game on Miniclip where anagrams are formed.
+	"""	
+	http://www.reportingpoint.net/5ff07b15b57215a1.html
+	Bookworm adventures
+
+GAMES WITH AN UNCONVENTIONAL WEAPON:
+	Bookworm adventures
 	BnB.  Water balloons.
 	SpyHunter
 	Bomberman.
@@ -27,15 +66,32 @@ Reference games
 	Katamari Damacy
 	Scribblenauts
 
-Reference toys
-	Pinata https://www.google.com/search?q=unconventional+weapon+toy&biw=1207&bih=624&source=lnms&tbm=isch&sa=X&ei=l74xVZ3jCYzaoASdnYHIAw&ved=0CAcQ_AUoAg#tbm=isch&q=pinata
-
-Reference themes
+REFERENCE THEMES
+	Bookworm Adventure  http://www.popcap.com/bookworm-adventures
+	Mario
+	King's Quest
+	Legend of Zelda Wind Waker
 	Play role of rebel in Iran-Contra scandal.  http://en.wikipedia.org/wiki/Contras
 	Prison
 	http://www.wired.com/2008/09/world-of-warcra/
 
-Ideas in the room:
+REFERENCE TOYS
+	Pinata https://www.google.com/search?q=unconventional+weapon+toy&biw=1207&bih=624&source=lnms&tbm=isch&sa=X&ei=l74xVZ3jCYzaoASdnYHIAw&ved=0CAcQ_AUoAg#tbm=isch&q=pinata
+	VersePerfect
+
+REFERENCE COGNITION
+ABSTRACT 4 groups of 20 Ss each were presented with a set of 21 multiple-solution anagram problems and 2 additional groups of 20 Ss each received 21 single-solution problems, in which the anagram was itself a word. An S-R mediational model or problem-solving behavior was employed to make predictions concerning the effects of 4 variables, viz., anagram letter order, solution-word Thorndike-Lorge frequency, anagram digram frequency, and solution-word digram frequency, on anagram solution times. All predictions of the model were confirmed and the results showed that for multiple- as well as single-solution anagram problems, solution times are faster for easy letter orders, high solution-word Thorndike-Lorge frequencies, low anagram digram frequencies, and high solution-word digram frequencies. 
+
+Anagram solution times: a function of multiple-solution anagrams.. Available from: https://www.researchgate.net/publication/17284298_Anagram_solution_times_a_function_of_multiple-solution_anagrams [accessed Apr 18, 2015].
+	"
+	"For example, psychologists use anagram-oriented tests, often called "anagram solution tasks", to assess the implicit memory of young adults and adults alike.[22]"   Java, Rosalind I. "Priming and Aging: Evidence of Preserved Memory Function in an Anagram Solution Task." The American Journal of Psychology, Vol. 105, No. 4. (Winter, 1992), pp. 541–548.
+	http://en.wikipedia.org/wiki/Anagram
+		https://www.researchgate.net/publication/18475052_Performance_of_male_schizophrenics_on_an_anagram-solution_task_an_application_of_an_S-R_mediation_model
+	http://www.jstor.org/discover/10.2307/1422909?uid=2&uid=4&sid=21106503576693
+	Anagram 37 Success Secrets - 37 Most Asked Questions On Anagram - What You ...  By Margaret Stokes https://books.google.com/books?id=oGcNBwAAQBAJ&pg=PP14&lpg=PP14&dq=%22anagram+solution+task%22&source=bl&ots=nCka8NL2_w&sig=l7b1c2P-okzEd1JyIyOjhiupMhw&hl=en&sa=X&ei=hqgyVbSsE5LUoATQ84HgAg&ved=0CFMQ6AEwCA#v=onepage&q=%22anagram%20solution%20task%22&f=false
+
+
+IDEAS IN THE ROOM:
 	Throw money, which cost points.  Transform.  Metroid 2032 bullets are points.
 	Everything is a weapon.  Pick up anything, even buildings.  Sidescroller platformer.
 	Lemonade Stand Tycoon.  Lemonade gun.
@@ -43,7 +99,7 @@ Ideas in the room:
 	Ascii emoji https://docs.google.com/spreadsheets/d/1MBF1nB6y0IsAU4mRCWH9FE9EZtvjMX3-QbkCaKBVq60/edit#gid=0
 	Puns.
 
-Ideas
+IDEAS
 	Name it.  Object appears.  Name it.  It explodes.
 		Part of word appears.
 		Type as many words as you can for that.
@@ -59,7 +115,7 @@ Ideas
 	Dodgeball.
 	Monogram of letters.  http://s291.photobucket.com/user/musksummer/media/4c9211f02608025594b211b.gif.html
 
-Games Jennifer Russ would like to play:
+GAMES JENNIFER RUSS WOULD LIKE TO PLAY:
 	Word Garden
 	Scrabble
 	Banagrams
@@ -101,12 +157,16 @@ Games Jennifer Russ would like to play:
 		Select picture whose English rhymes with English in picture  http://www.sproutonline.com/games/elmo-rhymes
 		Select rhyming word http://www.turtlediary.com/kindergarten-games/ela-games/word-rhyme.html
 
-Name ideas
+NAME IDEAS
+	Anagram Adventure
+	Anagram fighter
+	Anagram ninja
+	Anagram assassin
 	Word Warrior
 	Anagramatron
 	Wordsmith
 
-Math games Jennifer Russ would like to play:
+MATH GAMES JENNIFER RUSS WOULD LIKE TO PLAY:
 	Attacking with numbers.
 	Equations.  Sum them.
 
@@ -259,4 +319,58 @@ aim, aime, ame, baim, bame, blame, bleyme, boehm, boehme, brame, came, claim, cn
 blog, bog, clague, clog, cog, dague, flog, fog, fogg, frog, frogg, frogge, grog, grogg, haag, haug, hog, hogg, hogge, jog, krog, lague, log, maag, mogg, og, ogg, plog, pog, prague, rog, rogge, skog, slog, smog, tague, waag, zaugg, zogg 
 
 
+
+
+
+Famous Poems
+Famous songs
+Famous rhymes
+
+“One, Two, Buckle my shoe, Three, Four, Open the door,
+
+Five, Six, Pick up sticks, Seven, Eight, Lay them straight,
+
+Nine, Ten, A big, fat hen” …. and so on.
+
+
+
+“Rain rain go away,
+
+Come again another day,
+
+Little Johnny wants to play.”
+
+
+“Humpty Dumpty sat on a wall,
+
+Humpty Dumpty had a great fall.
+
+All the king’s horses and all the king’s men,
+
+couldn’t put Humpty together again.”
+
+
+
+“Jack and Jill went up the hill,
+
+To fetch a pail of water.
+
+Jack fell down and broke his crown,
+
+And Jill came tumbling after.”
+
+
+
+“Twinkle, Twinkle, Little Star,
+
+How I wonder what you are.
+
+Up above the world so high,
+
+Like a diamond in the sky.”
+
+
+http://listdose.com/top-10-most-famous-nursery-rhymes/
+
+Mad libs?
 
