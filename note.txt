@@ -1,8 +1,7 @@
 TODO
 	Type letters.  
-		Read letter.  
-		backspace. delete.  space.  enter.
-		If letter not in word, cannot type.  
+		space.  enter.
+		backspace. delete.  
 		Highlight letter typed.
 	Moby word list for crosswords or Scrabble.
 	Use all letters to advance to next scene.

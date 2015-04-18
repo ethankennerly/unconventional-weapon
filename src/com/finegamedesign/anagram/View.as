@@ -20,34 +20,29 @@ package com.finegamedesign.anagram
         internal function update():void
         {
             keyMouse.update();
-            updateLetters(main.word, this.model.word);
-            var presses:Array = justPresses(this.model.available);
+            var presses:Array = model.getPresses(keyMouse.justPressed);
             model.press(presses);
+            updateSubmit();
+            updateLetters(main.word, this.model.word);
             updateLetters(main.input, this.model.inputs);
+            updateHud();
         }
 
-        private function justPresses(word:Array):Array
+        /**
+         * TODO: Press space or enter.  Input word.
+         */
+        private function updateSubmit():void
         {
-            var presses:Array = [];
-            var letters:Object = {};
-            for (var i:int = 0; i < word.length; i++) 
+            if (keyMouse.justPressed("SPACE")
+            || keyMouse.justPressed("ENTER"))
             {
-                var letter:String = word[i];
-                if (letter in letters)
-                {
-                    continue;
-                }
-                else
-                {
-                    letters[letter] = true;
-                }
-                var justPressed:Boolean = keyMouse.justPressed(letter);
-                if (justPressed) 
-                {
-                    presses.push(letter);
-                }
+                model.submit();
             }
-            return presses;
+        }
+
+        private function updateHud():void
+        {
+            main.score.text = model.score.toString();
         }
 
         private function updateLetters(parent:MovieClip, letters:Array):void
