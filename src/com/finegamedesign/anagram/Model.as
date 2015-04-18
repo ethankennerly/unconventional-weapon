@@ -6,13 +6,15 @@ package com.finegamedesign.anagram
         internal var inputs:Array = [];
         private var available:Array = "START".split("");
         internal var word:Array = "START".split("");
-        private var dictionary:Object = {
-            "AT": true,
-            "START": true
-        };
         private var used:Object = {};
         internal var points:int = 0;
         internal var score:int = 0;
+        private var wordHash:Object; // = new WordHash().hash;
+
+        public function Model()
+        {
+            wordHash = new Words().init();
+        }
 
         internal function update():void
         {
@@ -74,7 +76,7 @@ package com.finegamedesign.anagram
         {
             var submission:String = inputs.join("");
             var accepted:Boolean = false;
-            if (submission in dictionary)
+            if (submission in wordHash)
             {
                 if (submission in used)
                 {

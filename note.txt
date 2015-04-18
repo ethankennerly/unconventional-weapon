@@ -1,17 +1,16 @@
 TODO
+	Moby word list for crosswords or Scrabble.
 	Type letters.  
-		space.  enter.
 		backspace. delete.  
 		Highlight letter typed.
-	Moby word list for crosswords or Scrabble.
 	Use all letters to advance to next scene.
 	Partial letters to knockback robot.
 	Parse level script.
 	Read instruction.
+	Test case:  2015-04-18 Redbeard at The MADE types word.  Got stumped by anagram "ERISIOUS" and "NIOMTENTPO"
 	Word robot approaches.
+	Modify robot shape per letter.
 	First frame not flicker.
-	Modifiy robot shape per letter.
-	Read score each letter in word.
 	Long word increases hit length.
 	Return to level select, after 10 words.
 	Level select.
@@ -19,8 +18,11 @@ TODO
 	Block burst.
 	Block shuffle.
 	Sweep gems into score.
+	Tune difficulty of words displayed.
 	Environment.
 	Multiplier for some letters.  Anagram Magic.
+	Research "anagram solution task"
+	2015-04-18 Redbeard sees ASCII graphics.  Got text file.
 	
 
 THEME
@@ -98,7 +100,7 @@ Anagram solution times: a function of multiple-solution anagrams.. Available fro
 		https://www.researchgate.net/publication/18475052_Performance_of_male_schizophrenics_on_an_anagram-solution_task_an_application_of_an_S-R_mediation_model
 	http://www.jstor.org/discover/10.2307/1422909?uid=2&uid=4&sid=21106503576693
 	Anagram 37 Success Secrets - 37 Most Asked Questions On Anagram - What You ...  By Margaret Stokes https://books.google.com/books?id=oGcNBwAAQBAJ&pg=PP14&lpg=PP14&dq=%22anagram+solution+task%22&source=bl&ots=nCka8NL2_w&sig=l7b1c2P-okzEd1JyIyOjhiupMhw&hl=en&sa=X&ei=hqgyVbSsE5LUoATQ84HgAg&ved=0CFMQ6AEwCA#v=onepage&q=%22anagram%20solution%20task%22&f=false
-
+	anagram solution task https://www.google.com/search?q=%22anagram+solution+task%22&gws_rd=ssl#q=%22anagram+solution+task%22&tbm=bks
 
 IDEAS IN THE ROOM:
 	Throw money, which cost points.  Transform.  Metroid 2032 bullets are points.

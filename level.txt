@@ -58,19 +58,11 @@ ANAGRAM ADVENTURE
 [To destroy each robot, type each full word. Example:  "TWO".  "WORDS".]
 
 
-                     RIO
-                     E U
-             @       S S
+                     TEL T
+                     N L N
+             @       I IGE
 
-[Harder robots are made of more valuable gems.  Each letter in this harder robot is worth 5 points!]
-
-
-
-                     I E
-                    MNPTN
-            @       O O T
-
-[A boss robot with more letters moves slow.  Spell short words to knock it back.  Hint:  This boss' name is "OMNIPOTENT".]
+[A boss robot with more letters moves slow.  Spell short words to knock it back.  Hint:  This boss' name is "INTELLIGENT".]
 
 
                      F
