@@ -20,6 +20,7 @@ package com.finegamedesign.anagram
         internal function update():void
         {
             keyMouse.update();
+            updateBackspace();
             var presses:Array = model.getPresses(keyMouse.justPressed);
             model.press(presses);
             updateSubmit();
@@ -29,7 +30,18 @@ package com.finegamedesign.anagram
         }
 
         /**
-         * TODO: Press space or enter.  Input word.
+         * Delete or backspace:  Remove last letter.
+         */
+        private function updateBackspace():void
+        {
+            if (keyMouse.justPressed("DELETE")
+            || keyMouse.justPressed("BACKSPACE"))
+            {
+                model.backspace();
+            }
+        }
+        /**
+         * Press space or enter.  Input word.
          */
         private function updateSubmit():void
         {
@@ -43,6 +55,7 @@ package com.finegamedesign.anagram
         private function updateHud():void
         {
             main.score.text = model.score.toString();
+            main.help.text = model.help.toString();
         }
 
         private function updateLetters(parent:MovieClip, letters:Array):void

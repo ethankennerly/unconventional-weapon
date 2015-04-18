@@ -4,19 +4,21 @@ package com.finegamedesign.anagram
 
     public class Words
     {
-        [Embed(source="../../../../txt/word_list_moby_crossword.flat.txt", mimeType="application/octet-stream")]
+        [Embed(source="../../../../txt/word_list_moby_crossword.flat.txt", 
+            mimeType="application/octet-stream")]
         private var WordsClass:Class;
         internal var words:Object;
 
         public function init():Object
         {
             var text:String = String(new WordsClass() as ByteArray);
-            var lines:Array = text.replace("\r\n", "\n").split("\n");
+            var lines:Array = text.replace(/\r\n/g, "\n").split("\n");
             var length:int = lines.length;
             words = {};
             for (var i:int = 0; i < length; i++)
             {
-                words[lines[i]] = true;
+                var word:String = lines[i];
+                words[word] = true;
             }
             return words;
         }

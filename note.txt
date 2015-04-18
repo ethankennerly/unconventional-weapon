@@ -1,9 +1,5 @@
 TODO
-	Moby word list for crosswords or Scrabble.
-	Type letters.  
-		backspace. delete.  
-		Highlight letter typed.
-	Use all letters to advance to next scene.
+	Use all letters to advance to next word.
 	Partial letters to knockback robot.
 	Parse level script.
 	Read instruction.
@@ -12,13 +8,24 @@ TODO
 	Modify robot shape per letter.
 	First frame not flicker.
 	Long word increases hit length.
+	Animate robot destroy.
+	Animate robot knockback.
+	Animate robot walk.
+	Use all letters to advance to next scene.
+	Levels.
 	Return to level select, after 10 words.
 	Level select.
+	Type letters.  
+		Highlight letter typed in word.
 	Block crack.
 	Block burst.
 	Block shuffle.
+	hear submit correct.
+	hear submit wrong.
+	hear letter press.
 	Sweep gems into score.
 	Tune difficulty of words displayed.
+	Best score.  After restart, reset score.
 	Environment.
 	Multiplier for some letters.  Anagram Magic.
 	Research "anagram solution task"

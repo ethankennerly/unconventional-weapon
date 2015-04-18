@@ -4,16 +4,31 @@ package com.finegamedesign.anagram
     {
         internal var letterMax:int = 10;
         internal var inputs:Array = [];
-        private var available:Array = "START".split("");
-        internal var word:Array = "START".split("");
+        private var available:Array;
+        internal var text:String;
+        internal var word:Array;
         private var used:Object = {};
         internal var points:int = 0;
         internal var score:int = 0;
-        private var wordHash:Object; // = new WordHash().hash;
+        private var wordHash:Object;
+        internal var levels:Levels = new Levels();
+        internal var help:String;
 
         public function Model()
         {
             wordHash = new Words().init();
+            trial(levels.getParams());
+        }
+
+        internal function trial(params:Object):void
+        {
+            for (var key:String in params)
+            {
+                this[key] = params[key];
+            }
+            word = text.split("");
+            available = text.split("");
+            used = {};
         }
 
         internal function update():void
@@ -49,7 +64,7 @@ package com.finegamedesign.anagram
         /**
          * If letter not avaiable, disable typing it.
          */
-        internal function press(presses:Array)
+        internal function press(presses:Array):void
         {
             var letters:Object = {};
             for (var i:int = 0; i < presses.length; i++) 
@@ -72,6 +87,14 @@ package com.finegamedesign.anagram
             }
         }
 
+        internal function backspace():void
+        {
+            if (1 <= inputs.length)
+            {
+                available.push(inputs.pop());
+            }
+        }
+
         internal function submit():Boolean
         {
             var submission:String = inputs.join("");
@@ -86,6 +109,10 @@ package com.finegamedesign.anagram
                     used[submission] = true;
                     accepted = true;
                     scoreUp(submission);
+                    if (text.length == submission.length)
+                    {
+                        trial(levels.up());
+                    }
                 }
             }
             trace("Model.submit: " + submission + ". Accepted " + accepted);
