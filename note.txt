@@ -9,6 +9,8 @@ TODO
 	Parse level script.
 	Read instruction.
 	Word robot approaches.
+	First frame not flicker.
+	Modifiy robot shape per letter.
 	Read score each letter in word.
 	Long word increases hit length.
 	Return to level select, after 10 words.
