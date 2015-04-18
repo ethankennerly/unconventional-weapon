@@ -1,0 +1,53 @@
+ANAGRAM ASSASSIN
+
+
+
+
+
+
+
+
+
+START
+
+[Type "START".  Then press the ENTER key.]
+
+
+
+
+SPLEL
+
+[Type "SPELL".  Then press the ENTER key.]
+
+
+
+
+WORDS
+
+[For bonus points, first type "ROD", "RODS", "WORD", "DROW".  Press ENTER after each word.]
+
+
+
+WORDS
+
+[To finish, use all letters.  Example:  "WORDS" or "SWORD".]
+
+
+
+STARE
+
+[Type each sub-word quickly before, the letters hit you!]
+
+
+
+
+WOT WSORD
+
+[Type a word with letters from both words to hit both.  Example:  "WOOD"]
+
+
+WOT WSORD
+
+[Then type each full word. Example:  "TWO".  "WORDS".]
+
+

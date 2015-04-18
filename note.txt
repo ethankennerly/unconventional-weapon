@@ -57,6 +57,7 @@ Ideas
 	Word Bombs.  Bombs detonate after that many seconds.
 	Physics demo.  Swing unusual blocks around.
 	Dodgeball.
+	Monogram of letters.  http://s291.photobucket.com/user/musksummer/media/4c9211f02608025594b211b.gif.html
 
 Games Jennifer Russ would like to play:
 	Word Garden
@@ -83,6 +84,22 @@ Games Jennifer Russ would like to play:
 	Word stem.  Type remaining.
 	Type multiple words to do combos.
 	Anagramatron http://www.buzzfeed.com/samir/anagramatron-twitter#.fxKjJvrYV
+		Why is anagram useful to practice?
+	Rhyme dictionary.  Words that rhyme with the word.
+		http://rhymebrain.com/en/What_rhymes_with_fast.html
+		Rhyme Scheme:  Couplet.  Sonnet.  Limmerick.
+			http://en.wikipedia.org/wiki/Rhyme_scheme
+			http://nicholastozier.com/have-you-mastered-all-six-of-these-basic-rhyme-schemes/
+		Restrict to number of syllables
+			http://www.rhymezone.com/r/rhyme.cgi?Word=dog&typeofrhyme=perfect&org1=syl&org2=l&org3=y
+		https://www.pinterest.com/christinamarkle/rhyming-activities/
+	Super Puzzle Fighter Turbo + Word Garden
+	http://pbskids.org/games/rhyming/
+		Move mouse to rhyme  http://pbskids.org/superwhy/#/game/rhymenroll
+		Select object whose English rhymes  http://www.nickjr.com/kids-games/oobi-rhymes.html
+		Select multiple choice word and picure that rhymes  http://teacher.scholastic.com/activities/bll/reggie/home/index.htm
+		Select picture whose English rhymes with English in picture  http://www.sproutonline.com/games/elmo-rhymes
+		Select rhyming word http://www.turtlediary.com/kindergarten-games/ela-games/word-rhyme.html
 
 Name ideas
 	Word Warrior
@@ -94,12 +111,54 @@ Math games Jennifer Russ would like to play:
 	Equations.  Sum them.
 
 
+"""
+Example rhyme schemes[edit]
+Alternate rhyme: ABAB CDCD EFEF GHGH...
+Ballade: Three stanzas of "ABABBCBC" followed by "BCBC".
+Boy Named Sue: A,A,B,C,C,(B, or infrequently D).
+Chant royal: Five stanzas of "ababccddedE" followed by either "ddedE" or "ccddedE". (The capital letters indicate a line repeated verbatim.)
+Cinquain: "A,B,A,B,B"
+Clerihew: "A,A,B,B"
+Couplet: "A,A", but usually occurs as "A,A, B,B C,C D,D ..."
+McCarron Couplet: "AABBABCCDDCDEEFFEF" a contemporary take on a classic rhyming pattern, introduced by the academic James McCarron.
+Enclosed rhyme (or enclosing rhyme): "ABBA"
+"Fire and Ice" stanza: "ABAABCBCB" as used in Robert Frost's poem "Fire and Ice"
+Keatsian Ode: "ABABCDECDE" used in Keat's Ode on Indolence, Ode on a Grecian Urn, and Ode to a Nightingale.
+Limerick: "AABBA"
+Monorhyme: "A,A,A,A,A...", an identical rhyme on every line, common in Latin and Arabic
+Ottava rima: "A,B,A,B,A,B,C,C"
+The Raven stanza: "ABCBBB", or "AA,B,CC,CB,B,B" when accounting for internal rhyme, as used by Edgar Allan Poe in "The Raven"
+Rhyme royal: "ABABBCC"
+Rondelet: "AbAabbA"
+Rubaiyat: "AABA"
+Scottish stanza: "AAABAB", as used by Robert Burns in works such as "To a Mouse"
+Simple 4-line: "ABCB"
+Sonnet ABAB CDCD EFEF GG
+Petrarchan sonnet: "ABBA ABBA CDE CDE" or "ABBA ABBA CDC DCD"
+Shakespearean sonnet: "ABAB CDCD EFEF GG"
+Spenserian sonnet: "ABAB BCBC CDCD EE"
+Onegin stanzas: "aBaBccDDeFFeGG" with the lowercase letters representing feminine rhymes and the uppercase representing masculine rhymes, written in iambic tetrameter
+Sestina: ABCDEF FAEBDC CFDABE ECBFAD DEACFB BDFECA, the seventh stanza is a tercet where line 1 has A in it but ends with D, line 2 has B in it but ends with E, line 3 has C in it but ends with F
+Spenserian stanza: "ABABBCBCCDCDEE"
+Stopping by Woods on a Snowy Evening form: "AABA BBCB CCDC DDDD" a modified Ruba'i stanza used by Robert Frost for the eponymous poem.
+Tanaga: traditional Tagalog tanaga is "AAAA"
+Terza rima: "ABA BCB CDC ...", ending on "YZY Z", "YZY ZZ", or "YZY ZYZ".
+Triplet: "AAA", often repeating like the couplet.
+The Road Not Taken stanza: "ABAAB" as used in Robert Frost's The Road Not Taken, and in Glæde over Danmark by Poul Martin Møller (English translation here).
+Villanelle: A1bA2 abA1 abA2 abA1 abA2 abA1A2, where A1 and A2 are lines repeated exactly which rhyme with the a lines.
+"""
+http://en.wikipedia.org/wiki/Rhyme_scheme
+
+
+
+
+
 ################
 type me
 ################
 to unlock
 ################
-the next level
+the next line
 ################
 correct spleling
 ################
@@ -113,5 +172,91 @@ type
 ################
 subwords first
 ################
-for bonus points
+for bunos pionts
 ################
+
+
+
+Rhymes with That
+
+that
+
+[Type a word that rhymes with "THAT".  Then press ENTER.]
+
+this
+
+[Type a word that rhymes with "THIS".  Then press ENTER.]
+
+that
+
+[Type a NEW word that rhymes with "THAT".  Then press ENTER.]
+
+this
+
+[Type a NEW word that rhymes with "THIS".  Then press ENTER.]
+
+fun
+
+[Type quickly to keep the rhythm.]
+
+run
+
+
+
+fast
+
+[Always type a new word. Or else you go back.]
+
+vast
+
+
+
+fun
+
+[No more help now...]
+
+son
+
+
+
+mast
+
+
+
+last
+
+
+
+
+that
+sat fat hat vat flat cat rat bat chat mat pat spat stat tat caveat habitat thermostat diplomat aristocrat democrat
+
+this
+hiss sis miss bis kiss dis diss pis piss abyss bliss amiss dismiss remiss premiss
+
+funny
+honey sunny sonny money bunny runny gunny tunny cottony
+
+fun
+son sun shun sion fon cen hun ven one done run none won gun tion ton nun spun bun donne dun pun rien bn fron gon jun seisin tonne tun yean stun naan spline toucan begun overrun undone outdone outrun overdone rerun redone misdone anyone everyone cretonne twentyone
+
+fast
+vast hast last passed past cast caste mast harassed massed blast classed surpassed aghast amassed overcast recast repast unsurpassed enthusiast
+
+rhyme
+lime rime time crime prime climb clime dime hym slime beim chime grime mime thyme chyme sublime birdlime begrime maritime paradigm overtime anytime lysozyme onetime mistime summertime dinnertime suppertime pantomime mesenchyme wintertime flexitime
+
+unconventional
+conventional unintentional intentional attentional extensional dimensional threedimensional twodimensional multidimensional
+
+
+
+game
+
+aim, aime, ame, baim, bame, blame, bleyme, boehm, boehme, brame, came, claim, cname, dame, damme, fame, fayme, flaim, flame, fraim, frame, graeme, grame, haim, kaim, lame, maim, mame, mayme, name, rhame, same, sejm, shame, squame, swaim, tame, whame, ysame 
+
+
+blog, bog, clague, clog, cog, dague, flog, fog, fogg, frog, frogg, frogge, grog, grogg, haag, haug, hog, hogg, hogge, jog, krog, lague, log, maag, mogg, og, ogg, plog, pog, prague, rog, rogge, skog, slog, smog, tague, waag, zaugg, zogg 
+
+
+
