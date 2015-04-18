@@ -1,6 +1,8 @@
 TODO
 	Read letters.
-	Type letters.
+	Type letters.  
+		backspace. delete.  space.  enter.
+		If letter not in word, cannot type.  
 	Moby word list for crosswords or Scrabble.
 	Use all letters to advance to next scene.
 	Partial letters to knockback robot.

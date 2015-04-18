@@ -6,6 +6,10 @@ package com.finegamedesign.anagram
 
     public class Main extends Sprite
     {
+        private var controller:Controller;
+        private var model:Model;
+        private var view:View;
+
         public var main:MovieClip;
 
         public function Main()
@@ -21,6 +25,17 @@ package com.finegamedesign.anagram
         private function init(event:Event=null):void
         {
             removeEventListener(Event.ADDED_TO_STAGE, init);
+            model = new Model();
+            controller = new Controller();
+            view = new View(model, main);
+            main.addEventListener(Event.ENTER_FRAME, update, false, 0, true);
+        }
+
+        private function update(e:Event):void
+        {
+            model.update();
+            controller.update();
+            view.update();
         }
     }
 }
