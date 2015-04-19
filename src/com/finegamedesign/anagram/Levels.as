@@ -71,7 +71,7 @@ package com.finegamedesign.anagram
             {text: "SHEAR"},
             {text: "SUBTLE"},
             {text: "REWARD"},
-            {text: "REPLAYS"},
+            {text: "REPLAYS", help: "NEXT SESSION, TO SKIP WORDS, PRESS PAGEUP."},
             {text: "MANTEL"},
             {text: "DESIGN"},
             {text: "LASTED"},

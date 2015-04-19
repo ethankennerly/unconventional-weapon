@@ -2,7 +2,6 @@ TODO
 	Animate robot walk.
 	Block crack.
 	Block burst.
-	Modify robot shape per letter.
 	hear submit correct.
 	hear submit wrong.
 	hear letter press.
@@ -10,10 +9,12 @@ TODO
 	Type letters after submitting.  Fix hightlight letter.  
 	Levels.
 	Return to level select, after 10 words.
+	Word hit input:  Read -10.  Lose 10 letters.  Word runs by.
 	If word overlaps input, knockback input.
 	If any part of input off-screen left, flee back to previous screen.
 	If any part of word off-screen right, advance to next scene.
 	Long word increases hit width.
+	Modify robot shape per letter.
 	Use all letters to advance to next scene.
 	May skip words.  Remember words shown and do not show again.
 	Tween knockback.
