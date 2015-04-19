@@ -24,10 +24,10 @@ package com.finegamedesign.anagram
             var presses:Array = model.getPresses(keyMouse.justPressed);
             model.press(presses);
             updateSubmit();
-            updateLetters(main.word, this.model.word);
-            updateLetters(main.input, this.model.inputs);
-            updateLetters(main.output, this.model.outputs);
-            updateLetters(main.complete, this.model.completes);
+            updateLetters(main.word.state, this.model.word);
+            updateLetters(main.word.complete, this.model.completes);
+            updateLetters(main.input.state, this.model.inputs);
+            updateLetters(main.input.output, this.model.outputs);
             updateHud();
         }
 
@@ -44,6 +44,14 @@ package com.finegamedesign.anagram
         }
         /**
          * Press space or enter.  Input word.
+         * Word robot approaches.
+         *     restructure synchronized animations:
+         *         word
+         *             complete
+         *             state
+         *         input
+         *             output
+         *             state
          */
         private function updateSubmit():void
         {
@@ -53,7 +61,8 @@ package com.finegamedesign.anagram
                 var state:String = model.submit();
                 if (state) 
                 {
-                    main.gotoAndPlay(state);
+                    main.word.gotoAndPlay(state);
+                    main.input.gotoAndPlay(state);
                 }
             }
         }

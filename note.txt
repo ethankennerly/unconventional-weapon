@@ -1,26 +1,38 @@
 TODO
-	Submit:  Word shoots. Test case:  2015-04-18 Anders sees word is a weapon.
 	Word robot approaches.
-	Partial letters to knockback robot.
-	Modify robot shape per letter.
-	First frame not flicker.
-	Long word increases hit length.
-	Animate robot destroy.
-	Animate robot knockback.
-	Animate robot walk.
+		restructure:
+			word
+				complete
+				state
+			input
+				output
+				state
+	If word overlaps input, knockback input.
+	If any part of input off-screen left, flee back to previous screen.
+	Submit or complete knockback robot by number of letters.
+	If any part of word off-screen right, advance to next scene.
+	Long word increases hit width.
 	Use all letters to advance to next scene.
 	Levels.
 	Return to level select, after 10 words.
+	May skip words.  Remember words shown and do not show again.
 	Level select.
+	Save level, score, and seen words in shared object.
+	Newgrounds submit high score.
 	Type letters.  
 		Highlight letter typed in word.
+	Block shuffle.  Test case:  2015-04-18 Jennifer wants to shuffle.  Irregular arrangement of letters.  Jennifer feels uncomfortable.
+	Animate robot walk.
 	Block crack.
 	Block burst.
-	Block shuffle.
+	Modify robot shape per letter.
 	hear submit correct.
 	hear submit wrong.
 	hear letter press.
 	Ludum Dare submission  http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=3040
+	Length of weapon selects different weapon background.  Test case:  2015-04-18 Anders sees word is a weapon.
+	Consonant or vowel selects different weapon type.  Test case:  2015-04-18 Anders sees word is a weapon.  Test case:  2015-04-18 Bryan at The MADE sees consonant-vowel differently.
+	Animate placing letter as machine constructing.
 	Two words.
 	Tune difficulty of words displayed.
 	Sweep gems into score.
@@ -36,6 +48,7 @@ TODO
 
 REFERENCE ANAGRAMS
 	http://www.enchantedlearning.com/english/anagram/numberofletters/5letters.shtml
+	http://words.jspell.com/anagrams-of/deductions
 
 THEME
 	An unconventional weapon
@@ -397,3 +410,9 @@ http://listdose.com/top-10-most-famous-nursery-rhymes/
 
 Mad libs?
 
+Sun 04/19/2015 
+07:33
+
+If word overlaps input, knockback input.
+If input off-screen, flee back to previous screen.
+Remember words shown and do not show again.

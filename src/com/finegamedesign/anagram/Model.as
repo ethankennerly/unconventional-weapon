@@ -116,7 +116,9 @@ package com.finegamedesign.anagram
         internal var state:String;
 
         /**
-         * Submit:  Word shoots. Test case:  2015-04-18 Anders sees word is a weapon.
+         * @return animation state.
+         *      "submit" or "complete":  Word shoots. Test case:  2015-04-18 Anders sees word is a weapon.
+         *      "submit":  Shuffle letters.  Test case:  2015-04-18 Jennifer wants to shuffle.  Irregular arrangement of letters.  Jennifer feels uncomfortable.
          */
         internal function submit():String
         {
@@ -138,12 +140,13 @@ package com.finegamedesign.anagram
                         scoreUp(submission);
                         if (text.length == submission.length)
                         {
-                            completes = inputs.concat();
+                            completes = word.concat();
                             trial(levels.up());
                             state = "complete";
                         }
                         else 
                         {
+                            shuffle(word);
                             state = "submit";
                         }
                     }
