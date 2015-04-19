@@ -7,7 +7,7 @@ TODO
 			input
 				output
 				state
-	Knockback on collision.
+	Knockback on collision:  global coordinate of right side most visible input greater than word position.
 	If word overlaps input, knockback input.
 	If any part of input off-screen left, flee back to previous screen.
 	Submit or complete knockback robot by number of letters.

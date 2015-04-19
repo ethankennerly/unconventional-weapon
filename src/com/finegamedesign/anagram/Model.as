@@ -5,6 +5,10 @@ package com.finegamedesign.anagram
         internal var letterMax:int = 11;
         internal var inputPosition:Number = 0.0;
         internal var inputs:Array = [];
+        /**
+         * From letter graphic.
+         */
+        internal var letterWidth:Number = 42.0;
         internal var help:String;
         internal var outputs:Array = [];
         internal var completes:Array = [];
@@ -81,18 +85,33 @@ package com.finegamedesign.anagram
             //- trace("Model.updatePosition: " + wordPosition);
         }
 
+        private var outputKnockback:Number = 0.0;
+
+        internal function mayKnockback():Boolean
+        {
+            return 0 < outputKnockback && 1 <= outputs.length;
+        }
+
         /**
          * Test case:  2015-04-18 Complete word.  See next word slide in.
          */
-        private function wordKnockback(length:int, complete:Boolean):void
+        private function prepareKnockback(length:int, complete:Boolean):void
         {
             var perLength:Number = 0.1;
-            var distance:Number = perLength * width * length;
+            outputKnockback = perLength * width * length;
             if (complete) {
-                distance *= 3;
+                outputKnockback *= 3;
             }
-            wordPosition += distance;
             clampWordPosition();
+        }
+
+        internal function onOutputHitsWord():void
+        {
+            if (mayKnockback())
+            {
+                wordPosition += outputKnockback;
+                outputKnockback = 0;
+            }
         }
 
         /**
@@ -181,7 +200,7 @@ package com.finegamedesign.anagram
                         accepted = true;
                         scoreUp(submission);
                         var complete:Boolean = text.length == submission.length;
-                        wordKnockback(submission.length, complete);
+                        prepareKnockback(submission.length, complete);
                         if (complete)
                         {
                             completes = word.concat();

@@ -1,6 +1,7 @@
 package com.finegamedesign.anagram
 {
     import flash.display.MovieClip;
+    import flash.geom.Point;
     import org.flixel.system.input.KeyMouse;
 
     public class View
@@ -76,8 +77,30 @@ package com.finegamedesign.anagram
 
         private function updatePosition():void
         {
+            if (model.mayKnockback())
+            {
+                updateOutputHitsWord();
+            }
             main.input.x = model.inputPosition;
             main.word.x = model.wordPosition;
+        }
+
+	    /**
+         * Knockback on collision:  global coordinate of right side most visible input greater than word position.
+         */
+        private function updateOutputHitsWord():void
+        {
+            var index:int = model.outputs.length - 1;
+            var right:String = "letter_" + index;
+            var bullet:MovieClip = main.input.output[right];
+            var point:Point = new Point(0.0, 0.0);
+            var bulletPosition:Point = bullet.localToGlobal(point);
+            var target:MovieClip = main.word.state;
+            var targetPosition:Point = target.localToGlobal(point);
+            if (targetPosition.x <= bulletPosition.x)
+            {
+                model.onOutputHitsWord();
+            }
         }
 
         private function updateLetters(parent:MovieClip, letters:Array):void
