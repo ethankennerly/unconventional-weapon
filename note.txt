@@ -6,9 +6,8 @@ TODO
 	hear submit correct.
 	hear submit wrong.
 	hear letter press.
-	Type letters.  
-		Highlight letter typed in word.
 	If very fast, skip level.
+	Type letters after submitting.  Fix hightlight letter.  
 	Levels.
 	Return to level select, after 10 words.
 	If word overlaps input, knockback input.

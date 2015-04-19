@@ -2,7 +2,7 @@ package com.finegamedesign.anagram
 {
     public class Model
     {
-        internal var letterMax:int = 11;
+        internal var letterMax:int = 10;
         internal var inputPosition:Number = 0.0;
         internal var inputs:Array = [];
         /**
@@ -63,6 +63,7 @@ package com.finegamedesign.anagram
                 wordWidthPerSecond *= Math.pow(base, power);
             }
             available = text.split("");
+            selects = word.concat();
             repeat = {};
         }
 
@@ -120,6 +121,7 @@ package com.finegamedesign.anagram
             {
                 wordPosition += outputKnockback;
                 shuffle(word);
+                selects = word.concat();
                 outputKnockback = 0;
             }
         }
@@ -151,11 +153,13 @@ package com.finegamedesign.anagram
         }
 
         /**
-         * If letter not avaiable, disable typing it.
+         * If letter not available, disable typing it.
+         * @return array of word indexes.
          */
-        internal function press(presses:Array):void
+        internal function press(presses:Array):Array
         {
             var letters:Object = {};
+            var selectsNow:Array = [];
             for (var i:int = 0; i < presses.length; i++) 
             {
                 var letter:String = presses[i];
@@ -172,16 +176,34 @@ package com.finegamedesign.anagram
                 {
                     available.splice(index, 1);
                     inputs.push(letter);
+                    var selected:int = selects.indexOf(letter);
+                    if (0 <= selected)
+                    {
+                        selectsNow.push(selected);
+                        selects[selected] = letter.toLowerCase();
+                    }
                 }
             }
+            return selectsNow;
         }
 
-        internal function backspace():void
+        private var selects:Array;
+
+        internal function backspace():Array
         {
+            var selectsNow:Array = [];
             if (1 <= inputs.length)
             {
-                available.push(inputs.pop());
+                var letter:String = inputs.pop();
+                available.push(letter);
+                var selected:int = selects.lastIndexOf(letter.toLowerCase());
+                if (0 <= selected)
+                {
+                    selectsNow.push(selected);
+                    selects[selected] = letter;
+                }
             }
+            return selectsNow;
         }
 
         internal var state:String;
@@ -196,7 +218,7 @@ package com.finegamedesign.anagram
             var submission:String = inputs.join("");
             var accepted:Boolean = false;
             state = "wrong";
-            if (2 <= submission.length)
+            if (1 <= submission.length)
             {
                 if (submission in wordHash)
                 {

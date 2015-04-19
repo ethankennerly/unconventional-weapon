@@ -24,7 +24,7 @@ package com.finegamedesign.anagram
             updateCheat();
             updateBackspace();
             var presses:Array = model.getPresses(keyMouse.justPressed);
-            model.press(presses);
+            updateSelect(model.press(presses), true);
             updateSubmit();
             updatePosition();
             updateLetters(main.word.state, this.model.word);
@@ -42,7 +42,7 @@ package com.finegamedesign.anagram
             if (keyMouse.justPressed("DELETE")
             || keyMouse.justPressed("BACKSPACE"))
             {
-                model.backspace();
+                updateSelect(model.backspace(), false);
             }
         }
         /**
@@ -67,6 +67,34 @@ package com.finegamedesign.anagram
                     main.word.gotoAndPlay(state);
                     main.input.gotoAndPlay(state);
                 }
+                resetSelect();
+            }
+        }
+
+        private function resetSelect():void
+        {
+            var parent:MovieClip = main.word.state;
+            var max:int = model.letterMax;
+            for (var index:int = 0; index < max; index++)
+            {
+                var name:String = "letter_" + index;
+                parent[name].gotoAndPlay("none");
+            }
+        }
+
+        /**
+         * Each selected letter in word plays animation "selected".
+Select, submit: Anders sees reticle and sword. Test case:  2015-04-18 Anders sees word is a weapon.
+         */
+        private function updateSelect(selects:Array, selected:Boolean):void
+        {
+            var parent:MovieClip = main.word.state;
+            for (var s:int = 0; s < selects.length; s++)
+            {
+                var index:int = selects[s];
+                var name:String = "letter_" + index;
+                var state:String = selected ? "selected" : "none";
+                parent[name].gotoAndPlay(state);
             }
         }
 
