@@ -6,14 +6,16 @@ package com.finegamedesign.anagram
         /**
          * Some anagrams copied from:
          * http://www.enchantedlearning.com/english/anagram/numberofletters/5letters.shtml
+         * Test case:  2015-04-18 Redbeard at The MADE types word.  Got stumped by anagram "ERISIOUS" and "NIOMTENTPO"
+         * http://www.cse.unr.edu/~cohen/text.php
          */
         internal var params:Object = [
             {text: "START", 
-             help: 'ANAGRAM ADVENTURE\nTYPE "START".  THEN PRESS THE SPACE KEY OR ENTER KEY.'},
+             help: 'ANAGRAM ADVENTURE\nCLICK HERE. TYPE "START".  PRESS THE SPACE KEY OR ENTER KEY.'},
             {text: "LSEPL", 
              help: 'TO DESTROY THE ROBOT, USE ALL THE LETTERS.  HINT:  "SPELL".  THEN PRESS THE SPACE KEY OR ENTER KEY.'},
             {text: "DWORS", 
-             help: 'TO ADD LETTERS, FIRST USE FEWER LETTERS.  EXAMPLES: "ROD", "RODS", "WORD", "SWORD".'},
+             help: 'TO SCORE HIGHER, FIRST USE FEWER LETTERS.  EXAMPLES: "ROD", "RODS", "WORD", "SWORD".'},
             {text: "STARE",
              help: 'A LETTER THAT HITS KNOCKS YOU BACK!  KNOCK THE ROBOT BACK!  EXAMPLE:  "EAT".'},
             {text: "FOR",
@@ -31,7 +33,7 @@ package com.finegamedesign.anagram
             {text: "PLEA"},
             {text: "BATS"},
             {text: "LEAD"},
-            {text: "BEAST"},
+            {text: "BEAST", help: "TO SCORE HIGHER, FIRST ENTER WORDS WITH FEWER LETTERS."},
             {text: "DIET"},
             {text: "INKS"},
             {text: "LIVE"},
@@ -44,15 +46,15 @@ package com.finegamedesign.anagram
             {text: "NAME"},
             {text: "SWAY"},
             {text: "PEARS"},
-            {text: "CODE"},
             {text: "SKATE"},
             {text: "BREAD"},
+            {text: "CODE"},
             {text: "DIETS"},
             {text: "CRATES"},
             {text: "TERSE"},
             {text: "LAPSE"},
             {text: "PROSE"},
-            {text: "SPREAD"},
+            {text: "SPREAD", help: "TO SCORE HIGHER, FIRST ENTER WORDS WITH FEWER LETTERS"},
             {text: "SMILE"},
             {text: "ALERT"},
             {text: "BEGIN"},
@@ -80,20 +82,25 @@ package com.finegamedesign.anagram
             {text: "DANGER"},
             {text: "SPRITES"},
             {text: "ARTIST"},
+            {text: "TENSOR"},
             {text: "ARIDEST"},
             {text: "PIRATES"},
             {text: "ALERTED"},
             {text: "ALLERGY"},
             {text: "REDUCES"},
             {text: "MEDICAL"},
+            {text: "RAPIDS"},
             {text: "RETARDS"},
             {text: "REALIST"},
+            {text: "MEANEST"},
             {text: "TRAINERS"},
             {text: "RECOUNTS"},
             {text: "PARROTED"},
+            {text: "UPROARS"},
             {text: "DESIGNER"},
             {text: "CRATERED"},
             {text: "CALIPERS"},
+            {text: "ANTIGEN"},
             {text: "ARROGANT"},
             {text: "EMIGRANTS"},
             {text: "AUCTIONED"},
@@ -102,7 +109,8 @@ package com.finegamedesign.anagram
             {text: "DEDUCTIONS"},
             {text: "PERCUSSION"},
             {text: "CONFIDENT"},
-            {text: "HARMONICAS"}
+            {text: "HARMONICAS"},
+            {text: "OMNIPOTENT"}
         ];
 
         internal function getParams():Object

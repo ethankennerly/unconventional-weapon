@@ -1,7 +1,9 @@
 TODO
-	Test case:  2015-04-18 Redbeard at The MADE types word.  Got stumped by anagram "ERISIOUS" and "NIOMTENTPO"
-	Partial letters to knockback robot.
+	Anders reads worths within.
+	Easier words:  CODE, SPREAD.
+	Anders sees context of weapon.
 	Word robot approaches.
+	Partial letters to knockback robot.
 	Modify robot shape per letter.
 	First frame not flicker.
 	Long word increases hit length.
@@ -29,6 +31,7 @@ TODO
 	Research "anagram solution task"
 	2015-04-18 Redbeard sees ASCII graphics.  Got text file.
 	Afer failures, hint with synonym.
+	Preview if word is valid
 
 REFERENCE ANAGRAMS
 	http://www.enchantedlearning.com/english/anagram/numberofletters/5letters.shtml
