@@ -122,6 +122,15 @@ package com.finegamedesign.anagram
                 wordPosition += outputKnockback;
                 shuffle(word);
                 selects = word.concat();
+                for (var i:int = 0; i < inputs.length; i++)
+                {
+                    var letter:String = inputs[i];
+                    var selected:int = selects.indexOf(letter);
+                    if (0 <= selected)
+                    {
+                        selects[selected] = letter.toLowerCase();
+                    }
+                }
                 outputKnockback = 0;
             }
         }
@@ -212,6 +221,7 @@ package com.finegamedesign.anagram
          * @return animation state.
          *      "submit" or "complete":  Word shoots. Test case:  2015-04-18 Anders sees word is a weapon.
          *      "submit":  Shuffle letters.  Test case:  2015-04-18 Jennifer wants to shuffle.  Irregular arrangement of letters.  Jennifer feels uncomfortable.
+         * Test case:  2015-04-19 Backspace. Deselect. Submit. Type. Select.
          */
         internal function submit():String
         {
@@ -250,6 +260,7 @@ package com.finegamedesign.anagram
             // trace("Model.submit: " + submission + ". Accepted " + accepted);
             inputs.length = 0;
             available = word.concat();
+            selects = word.concat();
             return state;
         }
 
