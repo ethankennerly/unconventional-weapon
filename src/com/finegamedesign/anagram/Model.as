@@ -20,6 +20,17 @@ package com.finegamedesign.anagram
             trial(levels.getParams());
         }
 
+        private function shuffle(cards:Array):void
+        {
+            for (var i:int = cards.length - 1; 1 <= i; i--)
+            {
+                var r:int = Math.random() * (i + 1);
+                var swap:* = cards[r];
+                cards[r] = cards[i];
+                cards[i] = swap;
+            }
+        }
+
         internal function trial(params:Object):void
         {
             help = "";
@@ -28,6 +39,10 @@ package com.finegamedesign.anagram
                 this[key] = params[key];
             }
             word = text.split("");
+            if ("" == help)
+            {
+                shuffle(word);
+            }
             available = text.split("");
             used = {};
         }

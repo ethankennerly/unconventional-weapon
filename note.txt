@@ -1,7 +1,6 @@
 TODO
-	Partial letters to knockback robot.
-	Parse level script.
 	Test case:  2015-04-18 Redbeard at The MADE types word.  Got stumped by anagram "ERISIOUS" and "NIOMTENTPO"
+	Partial letters to knockback robot.
 	Word robot approaches.
 	Modify robot shape per letter.
 	First frame not flicker.
@@ -29,7 +28,10 @@ TODO
 	Multiplier for some letters.  Anagram Magic.
 	Research "anagram solution task"
 	2015-04-18 Redbeard sees ASCII graphics.  Got text file.
-	
+	Afer failures, hint with synonym.
+
+REFERENCE ANAGRAMS
+	http://www.enchantedlearning.com/english/anagram/numberofletters/5letters.shtml
 
 THEME
 	An unconventional weapon
