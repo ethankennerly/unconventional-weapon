@@ -11,7 +11,8 @@ package com.finegamedesign.anagram
          */
         internal var params:Object = [
             {text: "START", 
-             help: 'ANAGRAM ADVENTURE\nCLICK HERE. TYPE "START".  PRESS THE SPACE KEY OR ENTER KEY.'},
+             help: 'ANAGRAM ADVENTURE\nCLICK HERE. TYPE "START".  PRESS THE SPACE KEY OR ENTER KEY.',
+             wordWidthPerSecond: 0.0},
             {text: "LSEPL", 
              help: 'TO DESTROY THE ROBOT, USE ALL THE LETTERS.  HINT:  "SPELL".  THEN PRESS THE SPACE KEY OR ENTER KEY.'},
             {text: "DWORS", 
@@ -110,7 +111,9 @@ package com.finegamedesign.anagram
             {text: "PERCUSSION"},
             {text: "CONFIDENT"},
             {text: "HARMONICAS"},
-            {text: "OMNIPOTENT"}
+            {text: "OMNIPOTENT"},
+            {text: "YOU"},
+            {text: "WIN"}
         ];
 
         internal function getParams():Object

@@ -42,6 +42,7 @@ package com.finegamedesign.anagram
         internal function trial(params:Object):void
         {
             help = "";
+            wordWidthPerSecond = -0.01;
             for (var key:String in params)
             {
                 this[key] = params[key];
@@ -51,11 +52,13 @@ package com.finegamedesign.anagram
             {
                 shuffle(word);
                 wordWidthPerSecond = // -0.05;
-                                     -0.02;
-            }
-            else
-            {
-                wordWidthPerSecond = -0.01;
+                                     // -0.02;
+                                     // -0.01;
+                                     // -0.005;
+                                     -0.001;
+                var power:Number = 2.0;
+                var base:Number = Math.max(1, letterMax - text.length);
+                wordWidthPerSecond *= Math.pow(base, power);
             }
             available = text.split("");
             repeat = {};
@@ -75,7 +78,8 @@ package com.finegamedesign.anagram
 
         private function clampWordPosition():void
         {
-            wordPosition = Math.max(-width, Math.min(0.0, wordPosition));
+            var wordWidth:Number = 150;
+            wordPosition = Math.max(-width + wordWidth, Math.min(0, wordPosition));
         }
 
         private function updatePosition(seconds:Number):void
@@ -93,7 +97,7 @@ package com.finegamedesign.anagram
         }
 
         /**
-         * Test case:  2015-04-18 Complete word.  See next word slide in.
+         * Clamp word to appear on screen.  Test case:  2015-04-18 Complete word.  See next word slide in.
          */
         private function prepareKnockback(length:int, complete:Boolean):void
         {
@@ -110,6 +114,7 @@ package com.finegamedesign.anagram
             if (mayKnockback())
             {
                 wordPosition += outputKnockback;
+                shuffle(word);
                 outputKnockback = 0;
             }
         }
@@ -209,14 +214,13 @@ package com.finegamedesign.anagram
                         }
                         else 
                         {
-                            shuffle(word);
                             state = "submit";
                         }
                     }
                 }
                 outputs = inputs.concat();
             }
-            trace("Model.submit: " + submission + ". Accepted " + accepted);
+            // trace("Model.submit: " + submission + ". Accepted " + accepted);
             inputs.length = 0;
             available = word.concat();
             return state;
@@ -226,6 +230,11 @@ package com.finegamedesign.anagram
         {
             points = submission.length;
             score += points;
+        }
+
+        internal function cheatLevelUp():void
+        {
+            trial(levels.up());
         }
     }
 }

@@ -21,6 +21,7 @@ package com.finegamedesign.anagram
         internal function update():void
         {
             keyMouse.update();
+            updateCheat();
             updateBackspace();
             var presses:Array = model.getPresses(keyMouse.justPressed);
             model.press(presses);
@@ -66,6 +67,17 @@ package com.finegamedesign.anagram
                     main.word.gotoAndPlay(state);
                     main.input.gotoAndPlay(state);
                 }
+            }
+        }
+
+        /**
+         * Press PAGE UP:  Cheat to next word.
+         */
+        private function updateCheat():void
+        {
+            if (keyMouse.justPressed("PAGEUP"))
+            {
+                model.cheatLevelUp();
             }
         }
 
