@@ -1,29 +1,4 @@
 TODO
-	Word robot approaches.
-		restructure:
-			word
-				complete
-				state
-			input
-				output
-				state
-	Knockback on collision:  global coordinate of right side most visible input greater than word position.
-	If word overlaps input, knockback input.
-	If any part of input off-screen left, flee back to previous screen.
-	Submit or complete knockback robot by number of letters.
-	If any part of word off-screen right, advance to next scene.
-	Long word increases hit width.
-	Use all letters to advance to next scene.
-	Levels.
-	Return to level select, after 10 words.
-	May skip words.  Remember words shown and do not show again.
-	Tween knockback.
-	Level select.
-	Save level, score, and seen words in shared object.
-	Newgrounds submit high score.
-	Type letters.  
-		Highlight letter typed in word.
-	Block shuffle.  Test case:  2015-04-18 Jennifer wants to shuffle.  Irregular arrangement of letters.  Jennifer feels uncomfortable.
 	Animate robot walk.
 	Block crack.
 	Block burst.
@@ -31,6 +6,22 @@ TODO
 	hear submit correct.
 	hear submit wrong.
 	hear letter press.
+	Type letters.  
+		Highlight letter typed in word.
+	If very fast, skip level.
+	Levels.
+	Return to level select, after 10 words.
+	If word overlaps input, knockback input.
+	If any part of input off-screen left, flee back to previous screen.
+	If any part of word off-screen right, advance to next scene.
+	Long word increases hit width.
+	Use all letters to advance to next scene.
+	May skip words.  Remember words shown and do not show again.
+	Tween knockback.
+	Level select.
+	Save level, score, and seen words in shared object.
+	Newgrounds submit high score.
+	Block shuffle.  Test case:  2015-04-18 Jennifer wants to shuffle.  Irregular arrangement of letters.  Jennifer feels uncomfortable.
 	Ludum Dare submission  http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=3040
 	Length of weapon selects different weapon background.  Test case:  2015-04-18 Anders sees word is a weapon.
 	Consonant or vowel selects different weapon type.  Test case:  2015-04-18 Anders sees word is a weapon.  Test case:  2015-04-18 Bryan at The MADE sees consonant-vowel differently.

@@ -84,6 +84,8 @@ package com.finegamedesign.anagram
         private function updateHud():void
         {
             main.score.text = model.score.toString();
+            main.level.text = model.levels.current().toString();
+            main.levelMax.text = model.levels.count().toString();
             main.help.text = model.help.toString();
         }
 

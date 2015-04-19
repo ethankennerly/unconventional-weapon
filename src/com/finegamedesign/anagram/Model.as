@@ -55,8 +55,10 @@ package com.finegamedesign.anagram
                                      // -0.02;
                                      // -0.01;
                                      // -0.005;
-                                     -0.001;
-                var power:Number = 2.0;
+                                     -0.002;
+                                     // -0.001;
+                var power:Number = // 2.0;
+                                   1.5;
                 var base:Number = Math.max(1, letterMax - text.length);
                 wordWidthPerSecond *= Math.pow(base, power);
             }
@@ -101,7 +103,10 @@ package com.finegamedesign.anagram
          */
         private function prepareKnockback(length:int, complete:Boolean):void
         {
-            var perLength:Number = 0.1;
+            var perLength:Number = 
+                                   0.03;
+                                   // 0.05;
+                                   // 0.1;
             outputKnockback = perLength * width * length;
             if (complete) {
                 outputKnockback *= 3;

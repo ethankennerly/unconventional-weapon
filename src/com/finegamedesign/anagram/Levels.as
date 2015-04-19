@@ -12,16 +12,16 @@ package com.finegamedesign.anagram
         internal var params:Object = [
             {text: "START", 
              help: 'ANAGRAM ADVENTURE\nCLICK HERE. TYPE "START".  PRESS THE SPACE KEY OR ENTER KEY.',
-             wordWidthPerSecond: 0.0},
+             wordWidthPerSecond: 0.0,
+             wordPosition: 0.0},
             {text: "LSEPL", 
              help: 'TO DESTROY THE ROBOT, USE ALL THE LETTERS.  HINT:  "SPELL".  THEN PRESS THE SPACE KEY OR ENTER KEY.'},
             {text: "DWORS", 
              help: 'TO SCORE HIGHER, FIRST USE FEWER LETTERS.  EXAMPLES: "ROD", "RODS", "WORD", "SWORD".'},
             {text: "STARE",
-             help: 'A LETTER THAT HITS KNOCKS YOU BACK!  KNOCK THE ROBOT BACK!  EXAMPLE:  "EAT".'},
+             help: 'KNOCK THE ROBOT BACK.  EXAMPLE:  "EAT", "TEAR", "STARE"'},
             {text: "FOR",
              help: 'ROBOTS WITH FEW LETTERS MOVE FAST!'},
-            //      0123456789
             {text: "EAT"},
             {text: "ART"},
             {text: "SAP"},
@@ -34,7 +34,7 @@ package com.finegamedesign.anagram
             {text: "PLEA"},
             {text: "BATS"},
             {text: "LEAD"},
-            {text: "BEAST", help: "TO SCORE HIGHER, FIRST ENTER WORDS WITH FEWER LETTERS."},
+            {text: "BEAST", help: 'TO SCORE HIGHER, FIRST ENTER WORDS WITH FEWER LETTERS.  EXAMPLES: "BE", "BATS", "AT".'},
             {text: "DIET"},
             {text: "INKS"},
             {text: "LIVE"},
@@ -55,7 +55,7 @@ package com.finegamedesign.anagram
             {text: "TERSE"},
             {text: "LAPSE"},
             {text: "PROSE"},
-            {text: "SPREAD", help: "TO SCORE HIGHER, FIRST ENTER WORDS WITH FEWER LETTERS"},
+            {text: "SPREAD", help: "TO SCORE HIGHER, FIRST ENTER WORDS WITH FEWER LETTERS. WHEN SATISFIED, ENTER FULL WORD."},
             {text: "SMILE"},
             {text: "ALERT"},
             {text: "BEGIN"},
@@ -85,6 +85,7 @@ package com.finegamedesign.anagram
             {text: "ARTIST"},
             {text: "TENSOR"},
             {text: "ARIDEST"},
+            {text: "LISTEN"},
             {text: "PIRATES"},
             {text: "ALERTED"},
             {text: "ALLERGY"},
@@ -94,12 +95,14 @@ package com.finegamedesign.anagram
             {text: "RETARDS"},
             {text: "REALIST"},
             {text: "MEANEST"},
+            {text: "ADMIRER"},
             {text: "TRAINERS"},
             {text: "RECOUNTS"},
             {text: "PARROTED"},
             {text: "DESIGNER"},
             {text: "CRATERED"},
             {text: "CALIPERS"},
+            {text: "CREATIVE"},
             {text: "ARROGANT"},
             {text: "EMIGRANTS"},
             {text: "AUCTIONED"},
@@ -125,6 +128,16 @@ package com.finegamedesign.anagram
         {
             index = (index + 1) % params.length;
             return getParams();
+        }
+
+        internal function current():int
+        {
+            return index + 1;
+        }
+
+        internal function count():int
+        {
+            return params.length;
         }
     }
 }
