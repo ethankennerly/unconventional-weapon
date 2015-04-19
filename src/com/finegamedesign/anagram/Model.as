@@ -4,10 +4,12 @@ package com.finegamedesign.anagram
     {
         internal var letterMax:int = 11;
         internal var inputs:Array = [];
+        internal var outputs:Array = [];
+        internal var completes:Array = [];
         private var available:Array;
         internal var text:String;
         internal var word:Array;
-        private var used:Object = {};
+        private var repeat:Object = {};
         internal var points:int = 0;
         internal var score:int = 0;
         private var wordHash:Object;
@@ -44,7 +46,7 @@ package com.finegamedesign.anagram
                 shuffle(word);
             }
             available = text.split("");
-            used = {};
+            repeat = {};
         }
 
         internal function update():void
@@ -111,30 +113,47 @@ package com.finegamedesign.anagram
             }
         }
 
-        internal function submit():Boolean
+        internal var state:String;
+
+        /**
+         * Submit:  Word shoots. Test case:  2015-04-18 Anders sees word is a weapon.
+         */
+        internal function submit():String
         {
             var submission:String = inputs.join("");
             var accepted:Boolean = false;
-            if (2 <= submission.length && submission in wordHash)
+            state = "wrong";
+            if (2 <= submission.length)
             {
-                if (submission in used)
+                if (submission in wordHash)
                 {
-                }
-                else
-                {
-                    used[submission] = true;
-                    accepted = true;
-                    scoreUp(submission);
-                    if (text.length == submission.length)
+                    if (submission in repeat)
                     {
-                        trial(levels.up());
+                        state = "repeat";
+                    }
+                    else
+                    {
+                        repeat[submission] = true;
+                        accepted = true;
+                        scoreUp(submission);
+                        if (text.length == submission.length)
+                        {
+                            completes = inputs.concat();
+                            trial(levels.up());
+                            state = "complete";
+                        }
+                        else 
+                        {
+                            state = "submit";
+                        }
                     }
                 }
+                outputs = inputs.concat();
             }
             trace("Model.submit: " + submission + ". Accepted " + accepted);
             inputs.length = 0;
             available = word.concat();
-            return accepted;
+            return state;
         }
 
         private function scoreUp(submission:String):void

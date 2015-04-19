@@ -1,7 +1,5 @@
 TODO
-	Anders reads worths within.
-	Easier words:  CODE, SPREAD.
-	Anders sees context of weapon.
+	Submit:  Word shoots. Test case:  2015-04-18 Anders sees word is a weapon.
 	Word robot approaches.
 	Partial letters to knockback robot.
 	Modify robot shape per letter.
@@ -22,6 +20,7 @@ TODO
 	hear submit correct.
 	hear submit wrong.
 	hear letter press.
+	Ludum Dare submission  http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=3040
 	Two words.
 	Tune difficulty of words displayed.
 	Sweep gems into score.
@@ -32,6 +31,8 @@ TODO
 	2015-04-18 Redbeard sees ASCII graphics.  Got text file.
 	Afer failures, hint with synonym.
 	Preview if word is valid
+	Publish at newgrounds http://www.newgrounds.com/projects/games/857007/preview
+	Andres orders easier words:  CODE, SPREAD.
 
 REFERENCE ANAGRAMS
 	http://www.enchantedlearning.com/english/anagram/numberofletters/5letters.shtml

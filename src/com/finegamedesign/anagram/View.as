@@ -26,6 +26,8 @@ package com.finegamedesign.anagram
             updateSubmit();
             updateLetters(main.word, this.model.word);
             updateLetters(main.input, this.model.inputs);
+            updateLetters(main.output, this.model.outputs);
+            updateLetters(main.complete, this.model.completes);
             updateHud();
         }
 
@@ -48,7 +50,11 @@ package com.finegamedesign.anagram
             if (keyMouse.justPressed("SPACE")
             || keyMouse.justPressed("ENTER"))
             {
-                model.submit();
+                var state:String = model.submit();
+                if (state) 
+                {
+                    main.gotoAndPlay(state);
+                }
             }
         }
 
