@@ -3,6 +3,7 @@ package com.finegamedesign.anagram
     import flash.display.MovieClip;
     import flash.display.Sprite;
     import flash.events.Event;
+    import flash.utils.getTimer;
 
     public class Main extends Sprite
     {
@@ -33,7 +34,8 @@ package com.finegamedesign.anagram
 
         private function update(e:Event):void
         {
-            model.update();
+            var now:int = getTimer();
+            model.update(now);
             controller.update();
             view.update();
         }

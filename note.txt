@@ -7,6 +7,7 @@ TODO
 			input
 				output
 				state
+	Knockback on collision.
 	If word overlaps input, knockback input.
 	If any part of input off-screen left, flee back to previous screen.
 	Submit or complete knockback robot by number of letters.
@@ -16,6 +17,7 @@ TODO
 	Levels.
 	Return to level select, after 10 words.
 	May skip words.  Remember words shown and do not show again.
+	Tween knockback.
 	Level select.
 	Save level, score, and seen words in shared object.
 	Newgrounds submit high score.

@@ -24,6 +24,7 @@ package com.finegamedesign.anagram
             var presses:Array = model.getPresses(keyMouse.justPressed);
             model.press(presses);
             updateSubmit();
+            updatePosition();
             updateLetters(main.word.state, this.model.word);
             updateLetters(main.word.complete, this.model.completes);
             updateLetters(main.input.state, this.model.inputs);
@@ -71,6 +72,12 @@ package com.finegamedesign.anagram
         {
             main.score.text = model.score.toString();
             main.help.text = model.help.toString();
+        }
+
+        private function updatePosition():void
+        {
+            main.input.x = model.inputPosition;
+            main.word.x = model.wordPosition;
         }
 
         private function updateLetters(parent:MovieClip, letters:Array):void

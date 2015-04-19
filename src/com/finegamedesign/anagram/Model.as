@@ -3,18 +3,20 @@ package com.finegamedesign.anagram
     public class Model
     {
         internal var letterMax:int = 11;
+        internal var inputPosition:Number = 0.0;
         internal var inputs:Array = [];
+        internal var help:String;
         internal var outputs:Array = [];
         internal var completes:Array = [];
-        private var available:Array;
         internal var text:String;
         internal var word:Array;
-        private var repeat:Object = {};
+        internal var wordPosition:Number = 0.0;
         internal var points:int = 0;
         internal var score:int = 0;
-        private var wordHash:Object;
         internal var levels:Levels = new Levels();
-        internal var help:String;
+        private var available:Array;
+        private var repeat:Object = {};
+        private var wordHash:Object;
 
         public function Model()
         {
@@ -44,13 +46,53 @@ package com.finegamedesign.anagram
             if ("" == help)
             {
                 shuffle(word);
+                wordWidthPerSecond = // -0.05;
+                                     -0.02;
+            }
+            else
+            {
+                wordWidthPerSecond = -0.01;
             }
             available = text.split("");
             repeat = {};
         }
 
-        internal function update():void
+        private var previous:int = 0;
+
+        internal function update(now:int):void
         {
+            var seconds:Number = (now - previous) / 1000.0;
+            updatePosition(seconds);
+            previous = now;
+        }
+
+        internal var width:Number = 720;
+        private var wordWidthPerSecond:Number;
+
+        private function clampWordPosition():void
+        {
+            wordPosition = Math.max(-width, Math.min(0.0, wordPosition));
+        }
+
+        private function updatePosition(seconds:Number):void
+        {
+            wordPosition += (seconds * width * wordWidthPerSecond);
+            clampWordPosition();
+            //- trace("Model.updatePosition: " + wordPosition);
+        }
+
+        /**
+         * Test case:  2015-04-18 Complete word.  See next word slide in.
+         */
+        private function wordKnockback(length:int, complete:Boolean):void
+        {
+            var perLength:Number = 0.1;
+            var distance:Number = perLength * width * length;
+            if (complete) {
+                distance *= 3;
+            }
+            wordPosition += distance;
+            clampWordPosition();
         }
 
         /**
@@ -138,7 +180,9 @@ package com.finegamedesign.anagram
                         repeat[submission] = true;
                         accepted = true;
                         scoreUp(submission);
-                        if (text.length == submission.length)
+                        var complete:Boolean = text.length == submission.length;
+                        wordKnockback(submission.length, complete);
+                        if (complete)
                         {
                             completes = word.concat();
                             trial(levels.up());
