@@ -2,7 +2,7 @@ package com.finegamedesign.anagram
 {
     public class Model
     {
-        internal var letterMax:int = 10;
+        internal var letterMax:int = 11;
         internal var inputs:Array = [];
         private var available:Array;
         internal var text:String;
@@ -22,6 +22,7 @@ package com.finegamedesign.anagram
 
         internal function trial(params:Object):void
         {
+            help = "";
             for (var key:String in params)
             {
                 this[key] = params[key];
@@ -99,7 +100,7 @@ package com.finegamedesign.anagram
         {
             var submission:String = inputs.join("");
             var accepted:Boolean = false;
-            if (submission in wordHash)
+            if (2 <= submission.length && submission in wordHash)
             {
                 if (submission in used)
                 {

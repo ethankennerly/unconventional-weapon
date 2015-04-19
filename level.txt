@@ -34,13 +34,28 @@ ANAGRAM ADVENTURE
                          STA
               @          R E
 
-[The robot is approaching you.  If a letter hits your letter it knocks you back!  Type words with these letters, before the robot hits you!  Example:  "EAT".]
+[Robot approaching!  If a letter hits your letter it knocks you back!  Type words to knock the robot back!  Example:  "EAT".]
 
 
                          STA
               @          R E
 
 [To destroy the robot, type all letters.  Hint:  "STARE".  Then press ENTER.]
+
+
+
+        F
+        O
+@       R
+
+[Robots with fewer letters move faster!]
+
+
+                     TEL T
+                     N L N
+             @       I IGE
+
+[A boss robot with more letters moves slow.  Spell short words to knock it back.  Hint:  This boss' name is "INTELLIGENT".]
 
 
 
@@ -56,17 +71,3 @@ ANAGRAM ADVENTURE
                 @   W    R D
 
 [To destroy each robot, type each full word. Example:  "TWO".  "WORDS".]
-
-
-                     TEL T
-                     N L N
-             @       I IGE
-
-[A boss robot with more letters moves slow.  Spell short words to knock it back.  Hint:  This boss' name is "INTELLIGENT".]
-
-
-                     F
-                     O
-             @       R
-
-[Robots with fewer letters move faster!]
