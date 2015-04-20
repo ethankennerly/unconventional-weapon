@@ -1,7 +1,4 @@
 TODO
-	hear submit correct.
-	hear submit wrong.
-	hear letter press.
 	If very fast, skip level.
 	Reach end.  Game over.  Continue.  Restart.
 	Type letters after submitting.  Fix hightlight letter.  

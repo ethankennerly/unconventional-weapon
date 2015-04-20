@@ -9,6 +9,7 @@ package com.finegamedesign.anagram
          * From letter graphic.
          */
         internal var letterWidth:Number = 42.0;
+        internal var onComplete:Function;
         internal var help:String;
         internal var outputs:Array = [];
         internal var completes:Array = [];
@@ -88,6 +89,7 @@ package com.finegamedesign.anagram
             if (wordPosition <= min)
             {
                 help = "GAME OVER!  TO SKIP ANY WORD, PRESS THE PAGEUP KEY.  TO GO BACK A WORD, PRESS THE PAGEDOWN KEY.";
+                helpState = "gameOver";
             }
             wordPosition = Math.max(min, Math.min(0, wordPosition));
         }
@@ -268,6 +270,10 @@ package com.finegamedesign.anagram
                             completes = word.concat();
                             trial(levels.up());
                             state = "complete";
+                            if (null != onComplete)
+                            {
+                                onComplete();
+                            }
                         }
                         else 
                         {

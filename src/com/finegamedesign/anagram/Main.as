@@ -5,6 +5,9 @@ package com.finegamedesign.anagram
     import flash.events.Event;
     import flash.utils.getTimer;
 
+    import org.flixel.plugin.photonstorm.API.FlxKongregate;
+    import com.newgrounds.API;
+
     public class Main extends Sprite
     {
         private var controller:Controller;
@@ -27,9 +30,11 @@ package com.finegamedesign.anagram
         {
             removeEventListener(Event.ADDED_TO_STAGE, init);
             model = new Model();
+            // model.onComplete = onComplete;
             controller = new Controller();
             view = new View(model, main);
             main.addEventListener(Event.ENTER_FRAME, update, false, 0, true);
+            include "../../../../newgrounds_connect.as"
         }
 
         private function update(e:Event):void
@@ -38,6 +43,12 @@ package com.finegamedesign.anagram
             model.update(now);
             controller.update();
             view.update();
+        }
+
+        private function onComplete():void
+        {
+            API.postScore("Score", model.score);
+            FlxKongregate.api.stats.submit("Score", model.score);
         }
     }
 }
