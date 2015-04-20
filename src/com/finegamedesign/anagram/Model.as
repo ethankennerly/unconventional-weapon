@@ -57,8 +57,10 @@ package com.finegamedesign.anagram
                                      // -0.005;
                                      -0.002;
                                      // -0.001;
-                var power:Number = // 2.0;
-                                   1.5;
+                var power:Number = 
+                                   // 1.5;
+                                   // 1.75;
+                                   2.0;
                 var base:Number = Math.max(1, letterMax - text.length);
                 wordWidthPerSecond *= Math.pow(base, power);
             }
@@ -81,8 +83,13 @@ package com.finegamedesign.anagram
 
         private function clampWordPosition():void
         {
-            var wordWidth:Number = 150;
-            wordPosition = Math.max(-width + wordWidth, Math.min(0, wordPosition));
+            var wordWidth:Number = 160;
+            var min:Number = -width + wordWidth;
+            if (wordPosition <= min)
+            {
+                help = "GAME OVER!  TO SKIP ANY WORD, PRESS THE PAGEUP KEY.  TO GO BACK A WORD, PRESS THE PAGEDOWN KEY.";
+            }
+            wordPosition = Math.max(min, Math.min(0, wordPosition));
         }
 
         private function updatePosition(seconds:Number):void
@@ -115,9 +122,10 @@ package com.finegamedesign.anagram
             clampWordPosition();
         }
 
-        internal function onOutputHitsWord():void
+        internal function onOutputHitsWord():Boolean
         {
-            if (mayKnockback())
+            var enabled:Boolean = mayKnockback();
+            if (enabled)
             {
                 wordPosition += outputKnockback;
                 shuffle(word);
@@ -133,6 +141,7 @@ package com.finegamedesign.anagram
                 }
                 outputKnockback = 0;
             }
+            return enabled;
         }
 
         /**
@@ -216,6 +225,7 @@ package com.finegamedesign.anagram
         }
 
         internal var state:String;
+        internal var helpState:String;
 
         /**
          * @return animation state.
@@ -235,9 +245,19 @@ package com.finegamedesign.anagram
                     if (submission in repeat)
                     {
                         state = "repeat";
+                        if (levels.index <= 50 && "" == help)
+                        {
+                            help = "YOU CAN ONLY ENTER EACH SHORTER WORD ONCE.";
+                            helpState = "repeat";
+                        }
                     }
                     else
                     {
+                        if ("repeat" == helpState)
+                        {
+                            helpState = "";
+                            help = "";
+                        }
                         repeat[submission] = true;
                         accepted = true;
                         scoreUp(submission);
@@ -270,9 +290,10 @@ package com.finegamedesign.anagram
             score += points;
         }
 
-        internal function cheatLevelUp():void
+        internal function cheatLevelUp(add:int):void
         {
-            trial(levels.up());
+            trial(levels.up(add));
+            wordPosition = 0.0;
         }
     }
 }

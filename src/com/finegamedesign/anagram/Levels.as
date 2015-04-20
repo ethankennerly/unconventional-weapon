@@ -10,18 +10,13 @@ package com.finegamedesign.anagram
          * http://www.cse.unr.edu/~cohen/text.php
          */
         internal var params:Object = [
-            {text: "START", 
-             help: 'ANAGRAM ATTACK\n\nCLICK HERE. TYPE "START".  PRESS THE SPACE KEY OR ENTER KEY.',
+            {text: "START", help: 'ANAGRAM ATTACK\n\nCLICK HERE. TYPE "START".  PRESS THE SPACE KEY OR ENTER KEY.',
              wordWidthPerSecond: 0.0,
              wordPosition: 0.0},
-            {text: "LSEPL", 
-             help: 'TO ADVANCE, USE ALL THE LETTERS.  HINT:  "SPELL".  THEN PRESS THE SPACE KEY OR ENTER KEY.'},
-            {text: "DWORS", 
-             help: 'TO SCORE HIGHER, FIRST USE FEWER LETTERS.  EXAMPLES: "ROD", "RODS", "WORD", "SWORD".'},
-            {text: "STARE",
-             help: 'A SHORTER WORD KNOCKS THE WORD BACK.  EXAMPLE:  "EAT", "TEAR", "STARE"'},
-            {text: "FOR",
-             help: 'WORDS WITH FEW LETTERS MOVE FAST!'},
+            {text: "LSEPL", help: 'TO ADVANCE, USE ALL THE LETTERS.  HINT:  "SPELL".  THEN PRESS THE SPACE KEY OR ENTER KEY.'},
+            {text: "DWORS", help: 'SHORTER WORDS SHUFFLE SAME LETTERS. EXAMPLES: "ROD", "RODS", "WORD", "SWORD".'},
+            {text: "STARE", help: 'SHORTER WORDS KNOCKBACK.  YOU CAN USE EACH SHORT WORD ONCE. EXAMPLE:  "EAT", "TEAR", "STARE"'},
+            {text: "FOR", help: 'WORDS WITH FEW LETTERS MOVE FAST!'},
             {text: "EAT"},
             {text: "ART"},
             {text: "SAP"},
@@ -34,11 +29,11 @@ package com.finegamedesign.anagram
             {text: "PLEA"},
             {text: "BATS"},
             {text: "LEAD"},
-            {text: "BEAST", help: 'TO SCORE HIGHER, FIRST ENTER WORDS WITH FEWER LETTERS.  EXAMPLES: "BE", "BATS", "AT".'},
+            {text: "BEAST", help: 'FOR BONUS POINTS, FIRST ENTER SHORT WORDS.  EXAMPLES: "BE", "BATS", "AT".'},
             {text: "DIET"},
             {text: "INKS"},
             {text: "LIVE"},
-            {text: "RACES"},
+            {text: "RACES", help: 'TOO CLOSE?  ENTER SHORT WORDS.'},
             {text: "KALE"},
             {text: "SNOW"},
             {text: "NEST"},
@@ -51,11 +46,11 @@ package com.finegamedesign.anagram
             {text: "BREAD"},
             {text: "CODE"},
             {text: "DIETS"},
-            {text: "CRATES"},
+            {text: "CRATES", help: 'SHORT WORDS SHUFFLES LETTERS, BUT THEY REMAIN THE SAME.'},
             {text: "TERSE"},
             {text: "LAPSE"},
             {text: "PROSE"},
-            {text: "SPREAD", help: "TO SCORE HIGHER, FIRST ENTER WORDS WITH FEWER LETTERS. WHEN SATISFIED, ENTER FULL WORD."},
+            {text: "SPREAD", help: "FOR BONUS POINTS OR KNOCKBACK, ENTER SHORT WORDS. TO ADVANCE, ENTER FULL WORD."},
             {text: "SMILE"},
             {text: "ALERT"},
             {text: "BEGIN"},
@@ -67,9 +62,9 @@ package com.finegamedesign.anagram
             {text: "VERSE"},
             {text: "RESIN"},
             {text: "NOTES"},
-            {text: "SPARSE"},
             {text: "SHEAR"},
             {text: "SUBTLE"},
+            {text: "SPARSE"},
             {text: "REWARD"},
             {text: "REPLAYS", help: "NEXT SESSION, TO SKIP WORDS, PRESS PAGEUP."},
             {text: "MANTEL"},
@@ -124,9 +119,13 @@ package com.finegamedesign.anagram
             return params[index];
         }
 
-        internal function up():Object
+        internal function up(add:int = 1):Object
         {
-            index = (index + 1) % params.length;
+            index = (index + add) % params.length;
+            while (index < 0)
+            {
+                index += params.length;
+            }
             return getParams();
         }
 

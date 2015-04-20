@@ -9,6 +9,10 @@ package com.finegamedesign.anagram
         private var keyMouse:KeyMouse;
         private var main:MovieClip;
         private var model:Model;
+        private var shootSound:ShootSound = new ShootSound();
+        private var selectSound:SelectSound = new SelectSound();
+        private var explosionSound:ExplosionSound = new ExplosionSound();
+        private var explosionBigSound:ExplosionBigSound = new ExplosionBigSound();
 
         public function View(model:Model, main:MovieClip)
         {
@@ -66,6 +70,7 @@ package com.finegamedesign.anagram
                 {
                     main.word.gotoAndPlay(state);
                     main.input.gotoAndPlay(state);
+                    shootSound.play();
                 }
                 resetSelect();
             }
@@ -95,6 +100,7 @@ Select, submit: Anders sees reticle and sword. Test case:  2015-04-18 Anders see
                 var name:String = "letter_" + index;
                 var state:String = selected ? "selected" : "none";
                 parent[name].gotoAndPlay(state);
+                selectSound.play();
             }
         }
 
@@ -105,7 +111,15 @@ Select, submit: Anders sees reticle and sword. Test case:  2015-04-18 Anders see
         {
             if (keyMouse.justPressed("PAGEUP"))
             {
-                model.cheatLevelUp();
+                model.score = 0;
+                model.cheatLevelUp(1);
+                selectSound.play();
+            }
+            else if (keyMouse.justPressed("PAGEDOWN"))
+            {
+                model.score = 0;
+                model.cheatLevelUp(-1);
+                selectSound.play();
             }
         }
 
@@ -141,7 +155,12 @@ Select, submit: Anders sees reticle and sword. Test case:  2015-04-18 Anders see
             var targetPosition:Point = target.localToGlobal(point);
             if (targetPosition.x <= bulletPosition.x)
             {
-                model.onOutputHitsWord();
+                if (model.onOutputHitsWord()) 
+                {
+                    target.gotoAndPlay("hit");
+                    main.word.complete.gotoAndPlay("hit");
+                    explosionBigSound.play();
+                }
             }
         }
 

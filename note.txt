@@ -1,11 +1,9 @@
 TODO
-	Animate robot walk.
-	Block crack.
-	Block burst.
 	hear submit correct.
 	hear submit wrong.
 	hear letter press.
 	If very fast, skip level.
+	Reach end.  Game over.  Continue.  Restart.
 	Type letters after submitting.  Fix hightlight letter.  
 	Levels.
 	Return to level select, after 10 words.
@@ -18,6 +16,7 @@ TODO
 	Use all letters to advance to next scene.
 	May skip words.  Remember words shown and do not show again.
 	Tween knockback.
+	Word rocket.
 	Level select.
 	Save level, score, and seen words in shared object.
 	Newgrounds submit high score.
