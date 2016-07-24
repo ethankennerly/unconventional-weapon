@@ -49,6 +49,7 @@ package com.finegamedesign.anagram
                 updateSelect(model.backspace(), false);
             }
         }
+
         /**
          * Press space or enter.  Input word.
          * Word robot approaches.
@@ -66,7 +67,7 @@ package com.finegamedesign.anagram
             || keyMouse.justPressed("ENTER"))
             {
                 var state:String = model.submit();
-                if (state) 
+                if (null != state) 
                 {
                     main.word.gotoAndPlay(state);
                     main.input.gotoAndPlay(state);
@@ -94,11 +95,11 @@ Select, submit: Anders sees reticle and sword. Test case:  2015-04-18 Anders see
         private function updateSelect(selects:Array, selected:Boolean):void
         {
             var parent:MovieClip = main.word.state;
+            var state:String = selected ? "selected" : "none";
             for (var s:int = 0; s < selects.length; s++)
             {
                 var index:int = selects[s];
                 var name:String = "letter_" + index;
-                var state:String = selected ? "selected" : "none";
                 parent[name].gotoAndPlay(state);
                 selectSound.play();
             }
@@ -111,13 +112,11 @@ Select, submit: Anders sees reticle and sword. Test case:  2015-04-18 Anders see
         {
             if (keyMouse.justPressed("PAGEUP"))
             {
-                model.score = 0;
                 model.cheatLevelUp(1);
                 selectSound.play();
             }
             else if (keyMouse.justPressed("PAGEDOWN"))
             {
-                model.score = 0;
                 model.cheatLevelUp(-1);
                 selectSound.play();
             }
@@ -137,7 +136,6 @@ Select, submit: Anders sees reticle and sword. Test case:  2015-04-18 Anders see
             {
                 updateOutputHitsWord();
             }
-            main.input.x = model.inputPosition;
             main.word.x = model.wordPosition;
         }
 

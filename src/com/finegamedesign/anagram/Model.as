@@ -2,26 +2,32 @@ package com.finegamedesign.anagram
 {
     public class Model
     {
+        internal var helpState:String;
         internal var letterMax:int = 10;
-        internal var inputPosition:Number = 0.0;
         internal var inputs:Array = [];
         /**
          * From letter graphic.
          */
         internal var letterWidth:Number = 42.0;
-        internal var onComplete:Function;
+        internal var /*<delegate>*/ ActionDelegate:/*<void>*/*;
+        internal var onComplete:/*<ActionDelegate>*/Function; 
+        internal var /*<delegate>*/ IsJustPressed:Boolean, letter:String;
         internal var help:String;
         internal var outputs:Array = [];
         internal var completes:Array = [];
         internal var text:String;
         internal var word:Array;
         internal var wordPosition:Number = 0.0;
+        internal var wordPositionScaled:Number = 0.0;
         internal var points:int = 0;
         internal var score:int = 0;
+        internal var state:String;
         internal var levels:Levels = new Levels();
         private var available:Array;
         private var repeat:Object = {};
+        private var selects:Array;
         private var wordHash:Object;
+        private var isVerbose:Boolean = false;
 
         public function Model()
         {
@@ -29,7 +35,7 @@ package com.finegamedesign.anagram
             trial(levels.getParams());
         }
 
-        private function shuffle(cards:Array):void
+        private static function shuffle(cards:Array):void
         {
             for (var i:int = cards.length - 1; 1 <= i; i--)
             {
@@ -40,15 +46,25 @@ package com.finegamedesign.anagram
             }
         }
 
-        internal function trial(params:Object):void
+        internal function trial(parameters:Object):void
         {
+            wordPosition = 0.0;
             help = "";
             wordWidthPerSecond = -0.01;
-            for (var key:String in params)
-            {
-                this[key] = params[key];
+            if (null != parameters["text"]) {
+                text = String(parameters["text"]);
             }
-            word = text.split("");
+            if (null != parameters["help"]) {
+                help = String(parameters["help"]);
+            }
+            if (null != parameters["wordWidthPerSecond"]) {
+                wordWidthPerSecond = Number(parameters["wordWidthPerSecond"]);
+            }
+            if (null != parameters["wordPosition"]) {
+                wordPosition = Number(parameters["wordPosition"]);
+            }
+            available = text.split("");
+            word = available.concat()
             if ("" == help)
             {
                 shuffle(word);
@@ -65,30 +81,45 @@ package com.finegamedesign.anagram
                 var base:Number = Math.max(1, letterMax - text.length);
                 wordWidthPerSecond *= Math.pow(base, power);
             }
-            available = text.split("");
             selects = word.concat();
             repeat = {};
+            if (isVerbose) trace("Model.trial: word[0]: <" + word[0] + ">");
         }
 
         private var previous:int = 0;
+        private var now:int = 0;
 
-        internal function update(now:int):void
+        internal function updateNow(cumulativeMilliseconds:int):void
         {
-            var seconds:Number = (now - previous) / 1000.0;
-            updatePosition(seconds);
+            var deltaSeconds:Number = (now - previous) / 1000.0;
+            update(deltaSeconds);
             previous = now;
         }
 
+        internal function update(deltaSeconds:Number):void
+        {
+            updatePosition(deltaSeconds);
+        }
+
         internal var width:Number = 720;
+        internal var scale:Number = 1.0;
         private var wordWidthPerSecond:Number;
 
+        internal function scaleToScreen(screenWidth:Number):void
+        {
+            scale = screenWidth / width;
+        }
+
+        /**
+         * Test case:  2015-03 Use Mac. Rosa Zedek expects to read key to change level.
+         */
         private function clampWordPosition():void
         {
             var wordWidth:Number = 160;
-            var min:Number = -width + wordWidth;
+            var min:Number = wordWidth - width;
             if (wordPosition <= min)
             {
-                help = "GAME OVER!  TO SKIP ANY WORD, PRESS THE PAGEUP KEY.  TO GO BACK A WORD, PRESS THE PAGEDOWN KEY.";
+                help = "GAME OVER! TO SKIP ANY WORD, PRESS THE PAGEUP KEY (MAC: FN+UP).  TO GO BACK A WORD, PRESS THE PAGEDOWN KEY (MAC: FN+DOWN).";
                 helpState = "gameOver";
             }
             wordPosition = Math.max(min, Math.min(0, wordPosition));
@@ -98,7 +129,8 @@ package com.finegamedesign.anagram
         {
             wordPosition += (seconds * width * wordWidthPerSecond);
             clampWordPosition();
-            //- trace("Model.updatePosition: " + wordPosition);
+            wordPositionScaled = wordPosition * scale;
+            if (isVerbose) trace("Model.updatePosition: " + wordPosition);
         }
 
         private var outputKnockback:Number = 0.0;
@@ -149,7 +181,7 @@ package com.finegamedesign.anagram
         /**
          * @param   justPressed     Filter signature justPressed(letter):Boolean.
          */
-        internal function getPresses(justPressed:Function):Array
+        internal function getPresses(justPressed:/*<IsJustPressed>*/Function):Array
         {
             var presses:Array = [];
             var letters:Object = {};
@@ -207,8 +239,6 @@ package com.finegamedesign.anagram
             return selectsNow;
         }
 
-        private var selects:Array;
-
         internal function backspace():Array
         {
             var selectsNow:Array = [];
@@ -225,9 +255,6 @@ package com.finegamedesign.anagram
             }
             return selectsNow;
         }
-
-        internal var state:String;
-        internal var helpState:String;
 
         /**
          * @return animation state.
@@ -283,7 +310,7 @@ package com.finegamedesign.anagram
                 }
                 outputs = inputs.concat();
             }
-            // trace("Model.submit: " + submission + ". Accepted " + accepted);
+            if (isVerbose) trace("Model.submit: " + submission + ". Accepted " + accepted);
             inputs.length = 0;
             available = word.concat();
             selects = word.concat();
@@ -298,6 +325,7 @@ package com.finegamedesign.anagram
 
         internal function cheatLevelUp(add:int):void
         {
+            score = 0;
             trial(levels.up(add));
             wordPosition = 0.0;
         }

@@ -116,6 +116,49 @@ Anagram solution times: a function of multiple-solution anagrams.. Available fro
 	Anagram 37 Success Secrets - 37 Most Asked Questions On Anagram - What You ...  By Margaret Stokes https://books.google.com/books?id=oGcNBwAAQBAJ&pg=PP14&lpg=PP14&dq=%22anagram+solution+task%22&source=bl&ots=nCka8NL2_w&sig=l7b1c2P-okzEd1JyIyOjhiupMhw&hl=en&sa=X&ei=hqgyVbSsE5LUoATQ84HgAg&ved=0CFMQ6AEwCA#v=onepage&q=%22anagram%20solution%20task%22&f=false
 	anagram solution task https://www.google.com/search?q=%22anagram+solution+task%22&gws_rd=ssl#q=%22anagram+solution+task%22&tbm=bks
 
+“Playing With Words”: Effects of an Anagram Solving Game-Like Application for Primary Education Students
+
+Article · December 2013 with 383 Reads
+DOI: 10.5539/ies.v6n2p110
+"""
+The present study reports the basic characteristics of a game-like application entitled “Playing with Words – PwW”. PwW is a single-user application where a word must be guessed given an anagram of that word. Anagrams are presented from a predefined word list and users can repeatedly try to guess the word, from which the anagram is derived, by placing (drag & drop) successively the given letters into the correct orthotactic order. Each effort is assessed as either correct or incorrect, while reaction and total time consumed are also recorded. The purpose of this game is both to entertain the user and to provide teachers with a simple computerized assessment tool. Summative evaluation results, based on 76 primary schoolchildren sample, indicate that the performance of anagram solving tasks explain a significant proportion of variance in reading fluency.
+"""
+https://www.researchgate.net/publication/258218577_Playing_With_Words_Effects_of_an_Anagram_Solving_Game-Like_Application_for_Primary_Education_Students
+
+The Journal of Psychology: Interdisciplinary and Applied
+
+Volume 81, Issue 2, 1972
+Select Language​▼
+Translator disclaimer
+Anagram Solving and Sat Performance
+Original Articles
+Anagram Solving and Sat Performance
+http://www.tandfonline.com/doi/abs/10.1080/00223980.1972.9916950?journalCode=vjrl20
+
+"""
+Summary.-Changing the levels of difficulty of anagrams and/or the requirement
+that solutions be verbalized affected the level of performance. Ss
+improved with practice, women being superior to men. Consistency of performance
+under these circumstances needs further study. 
+Psychological Reports, 1964, 14, 895-898. Q Southern Universities Press 1964
+LEVEL OF DIFFICULTY AND CONSISTENCY OF PERFORMANCE
+IN ANAGRAM SOLVING 
+"""
+http://www.amsciepub.com/doi/pdf/10.2466/pr0.1964.14.3.895
+
+
+
+Introverts performed better than extroverts.
+High intelligence performs better.
+Low stress performed better than high stress.
+Women performed better than men.
+
+Personality, Stress and Problem Solving
+By Sudarshan Hasija
+
+https://books.google.com/books?id=nI0xLKVOOYoC&pg=PA53&lpg=PA53&dq=anagram+solver+performance&source=bl&ots=UthwWA5r_q&sig=W8DQD4MHMuLDhU5W0Bk-NNxsC98&hl=en&sa=X&ved=0ahUKEwjj09PhquvMAhUM42MKHbGbCwIQ6AEIRTAH#v=onepage&q=anagram%20solver%20performance&f=false
+
+
 IDEAS IN THE ROOM:
 	Throw money, which cost points.  Transform.  Metroid 2032 bullets are points.
 	Everything is a weapon.  Pick up anything, even buildings.  Sidescroller platformer.

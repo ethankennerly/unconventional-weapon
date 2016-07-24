@@ -9,7 +9,7 @@ package com.finegamedesign.anagram
          * Test case:  2015-04-18 Redbeard at The MADE types word.  Got stumped by anagram "ERISIOUS" and "NIOMTENTPO"
          * http://www.cse.unr.edu/~cohen/text.php
          */
-        internal var params:Object = [
+        internal var params:Array = [
             {text: "START", help: 'ANAGRAM ATTACK\n\nCLICK HERE. TYPE "START".  PRESS THE SPACE KEY OR ENTER KEY.',
              wordWidthPerSecond: 0.0,
              wordPosition: 0.0},

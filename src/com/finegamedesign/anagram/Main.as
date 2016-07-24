@@ -10,7 +10,6 @@ package com.finegamedesign.anagram
 
     public class Main extends Sprite
     {
-        private var controller:Controller;
         private var model:Model;
         private var view:View;
 
@@ -31,7 +30,6 @@ package com.finegamedesign.anagram
             removeEventListener(Event.ADDED_TO_STAGE, init);
             model = new Model();
             // model.onComplete = onComplete;
-            controller = new Controller();
             view = new View(model, main);
             main.addEventListener(Event.ENTER_FRAME, update, false, 0, true);
             include "../../../../newgrounds_connect.as"
@@ -40,8 +38,7 @@ package com.finegamedesign.anagram
         private function update(e:Event):void
         {
             var now:int = getTimer();
-            model.update(now);
-            controller.update();
+            model.updateNow(now);
             view.update();
         }
 
